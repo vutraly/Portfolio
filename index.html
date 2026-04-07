@@ -1,0 +1,1657 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="VTL_img/favicon.png">
+    <title>Portfolio Tra Ly Vu</title>
+    <link rel="preload" as="image" href="VTL_img/20.webp" fetchpriority="high">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@100..900&family=Playfair+Display:wght@600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+    <link rel="stylesheet" href="https://unpkg.com/glightbox/dist/css/glightbox.min.css" />
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js" defer></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
+    <script src="https://unpkg.com/glightbox/dist/js/glightbox.min.js" defer></script>
+    <script src="scripts.js" defer></script>
+</head>
+
+<body class="scroll-smooth">
+
+    <nav class="sticky top-0 z-50 bg-white shadow-lg backdrop-blur-sm bg-opacity-80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="#hero-section" class="flex-shrink-0 text-[6rem] leading-none font-bold text-warm-600 top-name">
+                    TRA LY VU
+                </a>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#about"
+                            class="text-gray-700 hover:text-warm-accent px-3 py-2 rounded-md text-sm font-medium transition duration-150">About</a>
+                        <a href="#skills"
+                            class="text-gray-700 hover:text-warm-accent px-3 py-2 rounded-md text-sm font-medium transition duration-150">Skills</a>
+                        <a href="#portfolio"
+                            class="text-gray-700 hover:text-warm-accent px-3 py-2 rounded-md text-sm font-medium transition duration-150">Experiences</a>
+                        <a href="#worksample"
+                            class="text-gray-700 hover:text-warm-accent px-3 py-2 rounded-md text-sm font-medium transition duration-150">Work
+                            Samples</a>
+                        <a href="#contact"
+                            class="text-gray-700 hover:text-warm-accent px-3 py-2 rounded-md text-sm font-medium transition duration-150">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 1. Phần Giới Thiệu (Hero Section) -->
+    <section id="hero-section">
+        <div id="hero-overlay" class="text-center relative" style="background-image: url('VTL_img/20.webp'); 
+                    background-size: cover; 
+                    background-position: center 62%;">
+
+            <div class="hero-corners" aria-hidden="true">
+                <img src="VTL_img/gmsv/2_2.png" alt="" class="hero-img hero-seq-1 hero-corner top-left" loading="eager"
+                    fetchpriority="high" decoding="async">
+                <img src="VTL_img/elcom/7_7.png" alt="" class="hero-img hero-seq-2 hero-corner bottom-left"
+                    loading="eager" fetchpriority="high" decoding="async">
+                <img src="VTL_img/head/4_4.png" alt=""
+                    class="hero-img hero-seq-5 hero-corner mid-left hero-only-desktop" loading="eager"
+                    fetchpriority="high" decoding="async">
+                <img src="VTL_img/elcom/1_1.png" alt="" class="hero-img hero-seq-3 hero-corner top-right"
+                    loading="eager" fetchpriority="high" decoding="async">
+                <img src="VTL_img/thp/1.png" alt="" class="hero-img hero-seq-6 hero-corner mid-right hero-only-desktop"
+                    loading="eager" fetchpriority="high" decoding="async">
+                <img src="VTL_img/Vũ Trà Ly.webp" alt="" class="hero-img hero-seq-4 hero-corner bottom-right"
+                    loading="eager" fetchpriority="high" decoding="async">
+            </div>
+
+            <div id="hero-content" class="p-6 mt-32 sm:mt-36 md:mt-40 rounded-xl bg-black bg-opacity-30 relative z-10">
+                <h1
+                    class="text-2xl md:text-4xl font-extrabold tracking-tight leading-tight top-name hero-main-name hero-gradient-name">
+                    TRA LY VU
+                </h1>
+
+                <p class="mt-2 text-xl md:text-2xl font-light text-warm-300">
+                    <span id="typed-subtitle">International Communications Student</span>
+                </p>
+            </div>
+
+            <a href="#partners-section" class="scroll-indicator" aria-label="Scroll to explore">
+                ↓ Scroll to explore
+            </a>
+        </div>
+    </section>
+
+    <!-- Thanh Logo Công Ty & Dự Án (Partners & Projects Logos) -->
+    <section id="partners-section" class="py-20 bg-gradient-to-r from-warm-50 via-purple-50 to-pink-50 overflow-hidden">
+        <div class="mx-auto max-w-screen-2xl px-3 sm:px-4 lg:px-6">
+            <p class="text-center text-warm-700 text-sm font-bold mb-12 uppercase tracking-widest">Trusted by
+                organizations including</p>
+
+            <div class="relative">
+                <div class="overflow-hidden rounded-2xl shadow-lg">
+                    <div class="flex gap-8 lg:gap-10" id="logos-track">
+                        <div class="flex-shrink-0 w-48 h-36 flex items-center justify-center">
+                            <div
+                                class="w-full h-full bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 flex items-center justify-center">
+                                <img src="VTL_img/organizations/tp_logo.png" alt="TP Newspaper"
+                                    class="h-28 object-contain">
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0 w-48 h-36 flex items-center justify-center">
+                            <div
+                                class="w-full h-full bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 flex items-center justify-center">
+                                <img src="VTL_img/organizations/dav_logo.png" alt="DAV" class="h-28 object-contain">
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0 w-48 h-36 flex items-center justify-center">
+                            <div
+                                class="w-full h-full bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 flex items-center justify-center">
+                                <img src="VTL_img/organizations/logo_THP.png" alt="THP" class="h-28 object-contain">
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0 w-48 h-36 flex items-center justify-center">
+                            <div
+                                class="w-full h-full bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 flex items-center justify-center">
+                                <img src="VTL_img/organizations/elcom.png" alt="ELCOM" class="h-28 object-contain">
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0 w-48 h-36 flex items-center justify-center">
+                            <div
+                                class="w-full h-full bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 flex items-center justify-center">
+                                <img src="VTL_img/organizations/ficc.png" alt="ELCOM" class="h-28 object-contain">
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0 w-48 h-36 flex items-center justify-center">
+                            <div
+                                class="w-full h-full bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 flex items-center justify-center">
+                                <img src="VTL_img/organizations/ipro.jpg" alt="Trạm 293 P2" class="h-28 object-contain">
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0 w-48 h-36 flex items-center justify-center">
+                            <div
+                                class="w-full h-full bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 flex items-center justify-center">
+                                <img src="VTL_img/organizations/nktp.jpg" alt="ELCOM" class="h-28 object-contain">
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0 w-48 h-36 flex items-center justify-center">
+                            <div
+                                class="w-full h-full bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 flex items-center justify-center">
+                                <img src="VTL_img/organizations/givology.jpg" alt="ELCOM" class="h-28 object-contain">
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0 w-48 h-36 flex items-center justify-center">
+                            <div
+                                class="w-full h-full bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 flex items-center justify-center">
+                                <img src="VTL_img/organizations/summerrace.jpg" alt="ELCOM" class="h-28 object-contain">
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0 w-48 h-36 flex items-center justify-center">
+                            <div
+                                class="w-full h-full bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 flex items-center justify-center">
+                                <img src="VTL_img/organizations/agee.jpg" alt="ELCOM" class="h-28 object-contain">
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0 w-48 h-36 flex items-center justify-center">
+                            <div
+                                class="w-full h-full bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 flex items-center justify-center">
+                                <img src="VTL_img/organizations/vietint.png" alt="VietInt" class="h-28 object-contain">
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0 w-48 h-36 flex items-center justify-center">
+                            <div
+                                class="w-full h-full bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 flex items-center justify-center">
+                                <img src="VTL_img/organizations/tram293.jpg" alt="Trạm 293" class="h-28 object-contain">
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0 w-48 h-36 flex items-center justify-center">
+                            <div
+                                class="w-full h-full bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 flex items-center justify-center">
+                                <img src="VTL_img/organizations/fiesta.jpg" alt="Trạm 293 P2"
+                                    class="h-28 object-contain">
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0 w-48 h-36 flex items-center justify-center">
+                            <div
+                                class="w-full h-full bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 flex items-center justify-center">
+                                <img src="VTL_img/organizations/skyline.jpg" alt="Trạm 293 P2"
+                                    class="h-28 object-contain">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Phần Giới Thiệu Bản Thân (About Me) -->
+    <section id="about" class="content-section section-surface-warm about-editorial">
+        <div class="mx-auto max-w-7xl px-4">
+
+            <h2 class="text-4xl font-bold text-gray-800 mb-12 text-center pb-3 inline-block mx-auto">
+                About Me
+            </h2>
+
+            <div id="about-content" class="grid lg:grid-cols-3 gap-8">
+                <div class="lg:col-span-1 space-y-6">
+                    <div class="id-badge rounded-xl shadow-md bg-white about-id-float about-student-id">
+                        <div class="bg-warm-600 text-white text-center py-3 rounded-t-xl student-id-header">
+                            <span class="text-xl font-semibold tracking-wide">PERSONAL ID</span>
+                        </div>
+
+                        <div class="flex flex-col items-center py-6 px-4 student-id-profile">
+                            <img src="VTL_img/Vũ Trà Ly.webp" alt="Ảnh Chân Dung" loading="lazy"
+                                class="rounded-xl w-56 h-56 object-cover border-4 border-white shadow-xl mb-4 about-avatar student-photo">
+
+                            <h3 class="text-2xl font-bold text-gray-900 student-id-name">TRA LY VU</h3>
+                            <p class="text-sm font-medium text-warm-600 student-id-subname">
+                                I’d love to be called “Teacup”
+                            </p>
+                        </div>
+
+                        <div class="info-box px-6 pb-6 student-id-info">
+                            <div class="info-row">
+                                <p class="text-sm text-gray-500 font-semibold mb-1">D.O.B:</p>
+                                <p class="text-base font-bold text-gray-800">15/08/2005</p>
+                            </div>
+
+                            <div class="info-row">
+                                <p class="text-sm text-gray-500 font-semibold mb-1">Email:</p>
+                                <p class="text-base font-bold text-warm-600 break-all">teacup.dav@gmail.com</p>
+                            </div>
+
+                            <div class="info-row">
+                                <p class="text-sm text-gray-500 font-semibold mb-1">Mobile:</p>
+                                <p class="text-base font-bold text-gray-800">(+84) 93 1157 859</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-box bg-white p-6 rounded-xl shadow-lg">
+                        <span
+                            class="section-heading-sm bg-yellow-300 px-3 py-1 rounded-md text-gray-800 font-bold text-sm">EDUCATION</span>
+
+                        <div class="mt-3 space-y-4">
+                            <div class="flex items-start justify-between gap-4">
+                                <div class="flex-grow">
+                                    <p class="text-lg font-bold text-warm-700">2023 - Now</p>
+                                    <p class="text-gray-800 font-semibold">
+                                        Diplomatic Academy of Vietnam (DAV)
+                                    </p>
+                                    <p class="text-sm text-gray-600">International Communication</p>
+                                </div>
+                                <div class="flex-shrink-0 w-[64px] h-[64px] flex items-center justify-center">
+                                    <img src="VTL_img/organizations/dav_logo.png" alt="DAV Logo" loading="lazy"
+                                        class="w-full h-full object-contain">
+                                </div>
+                            </div>
+
+                            <hr class="border-gray-200">
+                            <div class="flex items-start justify-between gap-4">
+                                <div class="flex-grow">
+                                    <p class="text-lg font-bold text-warm-700">2020 - 2023</p>
+                                    <p class="text-gray-800 font-semibold">
+                                        Tran Phu High School for the Gifted in Hai Phong City
+                                    </p>
+                                    <p class="text-sm text-gray-600">Literature Specialized</p>
+                                </div>
+                                <div class="flex-shrink-0 w-[64px] h-[px] flex items-center justify-center">
+                                    <img src="VTL_img/organizations/tp_logo.png" alt="Tran Phu Logo" loading="lazy"
+                                        class="w-full h-full object-contain">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="lg:col-span-2 space-y-8">
+                    <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-warm-700">
+                        <h3 class="text-3xl font-extrabold text-warm-600 mb-4">
+                            <span>Responsible.</span> <span>Proactive.</span> <span>Empathic.</span>
+                        </h3>
+                        <p class="text-gray-700 text-lg leading-relaxed">
+                            As a proactive International Communication student with a strong academic foundation and
+                            hands-on media experience,
+                            I aim to grow in storytelling-driven communication that captures authentic moments and
+                            builds meaningful connections.
+                            I approach my work with curiosity and intention, always seeking opportunities to learn and
+                            contribute through each project.
+                        </p>
+                    </div>
+
+                    <div id="skills" class="space-y-6">
+                        <h4 class="text-2xl font-bold text-gray-800 mt-8 mb-4">Skills & Tools</h4>
+
+                        <div class="grid md:grid-cols-2 gap-6 items-stretch">
+                            <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-emerald-500 flex flex-col">
+                                <span class="section-heading-sm bg-emerald-200 text-emerald-800">Core Skills</span>
+                                <ul class="list-none space-y-2 text-gray-700 mt-3 flex-grow">
+                                    <li class="flex items-center"><i data-lucide="check-circle"
+                                            class="w-5 h-5 text-emerald-500 mr-2"></i> Photography (field & event)</li>
+                                    <li class="flex items-center"><i data-lucide="check-circle"
+                                            class="w-5 h-5 text-emerald-500 mr-2"></i> Videography (filming, interview
+                                        recording)</li>
+                                    <li class="flex items-center"><i data-lucide="check-circle"
+                                            class="w-5 h-5 text-emerald-500 mr-2"></i> Video editing</li>
+                                    <li class="flex items-center"><i data-lucide="check-circle"
+                                            class="w-5 h-5 text-emerald-500 mr-2"></i> Content production</li>
+                                    <li class="flex items-center"><i data-lucide="check-circle"
+                                            class="w-5 h-5 text-emerald-500 mr-2"></i> Storytelling & visual narrative
+                                    </li>
+                                    <li class="flex items-center"><i data-lucide="check-circle"
+                                            class="w-5 h-5 text-emerald-500 mr-2"></i> Journalism / Field reporting</li>
+                                </ul>
+                            </div>
+
+                            <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-orange-500 flex flex-col">
+                                <span class="section-heading-sm bg-orange-200 text-orange-800">Soft Skills</span>
+                                <ul class="list-none space-y-2 text-gray-700 mt-3 flex-grow">
+                                    <li class="flex items-center"><i data-lucide="user-check"
+                                            class="w-5 h-5 text-orange-500 mr-2"></i> Communication & teamwork</li>
+                                    <li class="flex items-center"><i data-lucide="clipboard-list"
+                                            class="w-5 h-5 text-orange-500 mr-2"></i> Detail-oriented</li>
+                                    <li class="flex items-center"><i data-lucide="zap"
+                                            class="w-5 h-5 text-orange-500 mr-2"></i> Adaptability</li>
+                                    <li class="flex items-center"><i data-lucide="clock"
+                                            class="w-5 h-5 text-orange-500 mr-2"></i> Time management</li>
+                                    <li class="flex items-center"><i data-lucide="brain"
+                                            class="w-5 h-5 text-orange-500 mr-2"></i> Problem solving</li>
+                                    <li class="flex items-center"><i data-lucide="heart"
+                                            class="w-5 h-5 text-orange-500 mr-2"></i> Empathy in storytelling</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-6 items-stretch">
+                            <div class="space-y-6">
+                                <div class="info-box bg-white p-6 rounded-xl shadow-md border-t-4 border-yellow-400">
+                                    <span class="section-heading-sm bg-yellow-300 text-warm-700">Languages</span>
+                                    <ul class="list-none space-y-3 text-gray-700 mt-3 text-base">
+                                        <li class="flex justify-between items-center">
+                                            <span>Vietnamese: <span
+                                                    class="text-warm-800 font-semibold">Native</span></span>
+                                            <img src="VTL_img/flags/vietnam.png" loading="lazy"
+                                                class="w-14 h-9 object-cover border border-gray-200 about-flag">
+                                        </li>
+                                        <li class="flex justify-between items-center">
+                                            <span>English: <span
+                                                    class="text-warm-800 font-semibold">Fluent</span></span>
+                                            <img src="VTL_img/flags/uk.png" loading="lazy"
+                                                class="w-14 h-9 object-cover border border-gray-200 about-flag">
+                                        </li>
+                                        <li class="flex justify-between items-center">
+                                            <span>Chinese: <span class="text-warm-800 font-semibold">Basic</span></span>
+                                            <img src="VTL_img/flags/china.png" loading="lazy"
+                                                class="w-14 h-9 object-cover border border-gray-200 about-flag">
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="info-box bg-white p-6 rounded-xl shadow-md border-t-4 border-purple-500">
+                                    <span class="section-heading-sm bg-purple-200 text-purple-800">AI Tools</span>
+                                    <div class="mt-3 space-y-3">
+                                        <div class="grid grid-cols-5 gap-2">
+                                            <div
+                                                class="aspect-square flex flex-col items-center justify-center bg-gray-50 rounded-lg border border-gray-100 p-1 gap-1 about-tool-icon">
+                                                <img src="VTL_img/tools/chatgpt.png" alt="ChatGPT"
+                                                    class="w-full h-full object-contain">
+                                            </div>
+                                            <div
+                                                class="aspect-square flex flex-col items-center justify-center bg-gray-50 rounded-lg border border-gray-100 p-1 gap-1 about-tool-icon">
+                                                <img src="VTL_img/tools/gemini.webp" alt="Gemini"
+                                                    class="w-full h-full object-contain">
+                                            </div>
+                                            <div
+                                                class="aspect-square flex flex-col items-center justify-center bg-gray-50 rounded-lg border border-gray-100 p-1 gap-1 about-tool-icon">
+                                                <img src="VTL_img/tools/grok.png" alt="Grok"
+                                                    class="w-full h-full object-contain">
+                                            </div>
+                                            <div
+                                                class="aspect-square flex flex-col items-center justify-center bg-gray-50 rounded-lg border border-gray-100 p-1 gap-1 about-tool-icon">
+                                                <img src="VTL_img/tools/claude.png" alt="Claude"
+                                                    class="w-full h-full object-contain">
+                                            </div>
+                                            <div
+                                                class="aspect-square flex flex-col items-center justify-center bg-gray-50 rounded-lg border border-gray-100 p-1 gap-1 about-tool-icon">
+                                                <img src="VTL_img/tools/gg_ai_studio.png" alt="Google AI Studio"
+                                                    class="w-full h-full object-contain">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="space-y-6">
+                                <div class="info-box bg-white p-6 rounded-xl shadow-md border-t-4 border-pink-500">
+                                    <span class="section-heading-sm bg-pink-200 text-pink-800">Content Creation
+                                        Tools</span>
+                                    <div class="grid grid-cols-4 gap-2">
+                                        <div
+                                            class="aspect-square flex items-center justify-center bg-gray-50 rounded-lg border border-gray-100 p-2 about-tool-icon">
+                                            <img src="VTL_img/tools/capcut.png" alt="CapCut"
+                                                class="w-full h-full object-contain">
+                                        </div>
+                                        <div
+                                            class="aspect-square flex items-center justify-center bg-gray-50 rounded-lg border border-gray-100 p-2 about-tool-icon">
+                                            <img src="VTL_img/tools/pr.png" alt="Premiere"
+                                                class="w-full h-full object-contain">
+                                        </div>
+                                        <div
+                                            class="aspect-square flex items-center justify-center bg-gray-50 rounded-lg border border-gray-100 p-2 about-tool-icon">
+                                            <img src="VTL_img/tools/lr.png" alt="Lightroom"
+                                                class="w-full h-full object-contain">
+                                        </div>
+                                        <div
+                                            class="aspect-square flex items-center justify-center bg-gray-50 rounded-lg border border-gray-100 p-2 about-tool-icon">
+                                            <img src="VTL_img/tools/canva.jpg" alt="Canva"
+                                                class="w-full h-full object-contain">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="info-box bg-white p-6 rounded-xl shadow-md border-t-4 border-blue-500">
+                                    <span class="section-heading-sm bg-blue-200 text-blue-800">Productivity Tools</span>
+                                    <div class="mt-3 space-y-3 text-sm text-gray-700">
+                                        <div class="flex items-center justify-between gap-3">
+                                            <div>
+                                                <p class="font-bold text-blue-700 italic">MS Office:</p>
+                                                <p>Word, Excel, PowerPoint</p>
+                                            </div>
+                                            <img src="VTL_img/tools/office.png" alt="Microsoft Office" loading="lazy"
+                                                class="w-14 h-14 object-contain flex-shrink-0">
+                                        </div>
+                                        <div class="flex items-center justify-between gap-3">
+                                            <div>
+                                                <p class="font-bold text-blue-700 italic">Google Workspace:</p>
+                                                <p>Drive, Docs, Sheets, Form, Slides</p>
+                                            </div>
+                                            <img src="VTL_img/tools/gg_work.png" alt="Google Workspace" loading="lazy"
+                                                class="w-14 h-14 object-contain flex-shrink-0">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 4. Phần Kinh Nghiệm & Thành Tựu (Experiences) -->
+    <section id="portfolio" class="content-section section-surface-warm experience-editorial">
+        <div class="mx-auto max-w-5xl px-4">
+            <h2 class="text-4xl font-bold text-gray-800 mb-12 text-center pb-3 inline-block mx-auto">Experiences</h2>
+            <div class="grid md:grid-cols-1 gap-10">
+                <!-- Kinh nghiệm 1: ELCOM -->
+                <div class="card exp-card exp-no-shimmer bg-gray-50 rounded-xl shadow-lg overflow-hidden transition duration-300 border hover:border-warm-700"
+                    data-tilt data-tilt-max="2" data-tilt-speed="400">
+                    <div class="p-6">
+                        <div class="elcom-title-row mb-3">
+                            <h3 class="text-2xl font-bold mb-0 text-gray-800"><span class="exp-num">01.</span>
+                                Communications Intern - ELCOM Corporation</h3>
+                            <img src="VTL_img/organizations/elcom.png" alt="ELCOM logo" class="elcom-title-logo"
+                                loading="lazy">
+                        </div>
+                        <p class="text-md font-semibold text-warm-600 mb-1">Role: Internal Communications Intern</p>
+                        <div class="flex flex-wrap gap-2 mb-0 exp-tags-wrap" data-aos="fade-up" data-aos-delay="120">
+                            <span class="experience-tag bg-warm-300 text-warm-900">Multimedia content production</span>
+                            <span class="experience-tag bg-warm-300 text-warm-900">Content creation &
+                                storytelling</span>
+                            <span class="experience-tag bg-warm-300 text-warm-900">Video production & editing</span>
+                            <span class="experience-tag bg-warm-300 text-warm-900">AI content creation (Prompt
+                                engineering)</span>
+                            <span class="experience-tag bg-warm-300 text-warm-900">Trend analysis</span>
+                        </div>
+                        <div id="elcom-carousel-container" class="image-carousel-container">
+                            <div id="elcom-carousel-slides" class="carousel-slides">
+                            </div>
+                            <button class="carousel-nav-button prev" onclick="navigateCarousel('elcom', -1)">
+                                <i data-lucide="chevron-left" class="w-6 h-6 text-gray-800"></i>
+                            </button>
+                            <button class="carousel-nav-button next" onclick="navigateCarousel('elcom', 1)">
+                                <i data-lucide="chevron-right" class="w-6 h-6 text-gray-800"></i>
+                            </button>
+                        </div>
+
+                        <div class="elcom-output-layout mt-5" data-aos="fade-up" data-aos-delay="100">
+                            <p class="elcom-output-title">Outputs</p>
+                            <article class="elcom-output-item elcom-o1">
+                                <p class="elcom-output-number"><span class="count-up" data-target="30">1</span>+</p>
+                                <p class="elcom-output-text">
+                                    <span class="line-1">short-form videos produced and published</span>
+                                    <span class="line-2">across internal channels and recruitment platforms</span>
+                                </p>
+                            </article>
+                            <article class="elcom-output-item elcom-o2">
+                                <p class="elcom-output-number"><span class="count-up" data-target="35">1</span>+</p>
+                                <p class="elcom-output-text">content pieces created and published across corporate
+                                    channels</p>
+                            </article>
+                            <article class="elcom-output-item elcom-o3">
+                                <p class="elcom-output-number"><span class="count-up" data-target="20">1</span>+</p>
+                                <p class="elcom-output-text">communication materials contributed and distributed across
+                                    internal platforms</p>
+                            </article>
+                            <article class="elcom-output-item elcom-o4" style="display: block; margin-top: 1.3em;">
+                                <p class="elcom-output-number"><span class="count-up" data-target="20">1</span>+</p>
+                                <p class="elcom-output-text">
+                                    <span class="line-1">employee interviews conducted and featured</span>
+                                    <span class="line-2">in internal communication articles</span>
+                                </p>
+                            </article>
+                            <article class="elcom-output-item elcom-o5">
+                                <p class="elcom-output-number"><span class="count-up" data-target="10">1</span>+</p>
+                                <p class="elcom-output-text">occasions serving as a member of the organizing committee
+                                    for internal and external events</p>
+                            </article>
+                            <article class="elcom-output-item elcom-o6">
+                                <p class="elcom-output-number"><span class="count-up" data-target="15">1</span>+</p>
+                                <p class="elcom-output-text">
+                                    <span class="line-1">photography assignments completed for</span>
+                                    <span class="line-2" style="white-space: nowrap;">internal training sessions and
+                                        corporate events</span>
+                                </p>
+                            </article>
+                            <article class="elcom-output-item elcom-o7">
+                                <p class="elcom-output-number"><span class="count-up" data-target="5">1</span>+</p>
+                                <p class="elcom-output-text">times serving as Master of Ceremonies (MC) for internal
+                                    company programs</p>
+                            </article>
+                            <article class="elcom-output-item elcom-o8">
+                                <p class="elcom-output-number"><span class="count-up" data-target="8">1</span>+</p>
+                                <p class="elcom-output-text">new communication series conceptualized and launched</p>
+                            </article>
+                            <div class="elcom-output-center-photo-wrap d-sm-none" aria-hidden="true">
+                                <img src="VTL_img/bg_elcom.webp" alt="ELCOM cutout placeholder"
+                                    class="elcom-output-center-photo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Kinh nghiệm 2: THP -->
+                <div class="card exp-card exp-no-shimmer exp-card-thp-02 bg-gray-50 rounded-xl shadow-lg overflow-hidden transition duration-300 border hover:border-warm-700"
+                    data-tilt data-tilt-max="2" data-tilt-speed="400">
+                    <div class="p-6">
+                        <div class="thp-title-row mb-3">
+                            <h3 class="text-2xl font-bold mb-0 text-gray-800"><span class="exp-num">02.</span> Broadcast
+                                & Field Reporting Intern, Hai Phong Newspaper and Radio, Television Station (2024)</h3>
+                            <img src="VTL_img/organizations/logo_THP.png" alt="THP logo" class="thp-title-logo"
+                                loading="lazy">
+                        </div>
+                        <p class="text-md font-semibold text-warm-600 mb-1">Role: Digital Content Department Intern</p>
+                        <div class="flex flex-wrap gap-2 mb-0 exp-tags-wrap" data-aos="fade-up" data-aos-delay="120">
+                            <span class="experience-tag bg-warm-300 text-warm-900">Broadcast production</span>
+                            <span class="experience-tag bg-warm-300 text-warm-900">On-camera presentation</span>
+                            <span class="experience-tag bg-warm-300 text-warm-900">Journalism & news production</span>
+                            <span class="experience-tag bg-warm-300 text-warm-900">Field reporting</span>
+                            <span class="experience-tag bg-warm-300 text-warm-900">Video editing &
+                                post-production</span>
+                        </div>
+                        <div class="tv-wrapper">
+                            <!-- Antennas -->
+                            <div class="tv-antenna tv-antenna-left"></div>
+                            <div class="tv-antenna tv-antenna-right"></div>
+
+                            <div class="tv-frame-outer">
+                                <div class="tv-frame-inner">
+                                    <div class="tv-screen-area">
+                                        <!-- REC -->
+                                        <!-- <div class="tv-rec-indicator" id="tv-rec-indicator" style="position:absolute;left:18px;top:10px;z-index:120;display:flex;align-items:center;font-size:0.92rem;font-family:monospace;font-weight:600;color:#fff;letter-spacing:0.04em;">
+                                            <span style="display:inline-block;width:10px;height:10px;background:#ff3b3b;border-radius:50%;margin-right:7px;box-shadow:0 0 6px 1px #ff3b3b99;"></span>
+                                                REC <span id="tv-rec-time" style="margin-left:8px;font-size:0.85em;font-weight:400;opacity:0.85;">00:00</span>
+                                        </div> -->
+                                        <div class="tv-glass-overlay"></div>
+                                        <div id="thp-carousel-container" class="image-carousel-container">
+                                            <div class="tv-static-effect" id="tv-static-effect"></div>
+                                            <div id="thp-carousel-slides" class="carousel-slides">
+                                            </div>
+                                            <button class="carousel-nav-button prev"
+                                                onclick="navigateCarousel('thp', -1)">
+                                                <i data-lucide="chevron-left" class="w-6 h-6 text-gray-800"></i>
+                                            </button>
+                                            <button class="carousel-nav-button next"
+                                                onclick="navigateCarousel('thp', 1)">
+                                                <i data-lucide="chevron-right" class="w-6 h-6 text-gray-800"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Retro TV Control Panel -->
+                                    <div class="tv-control-panel">
+                                        <div class="tv-knob">
+                                            <div class="tv-knob-inner"></div>
+                                        </div>
+                                        <div class="tv-knob">
+                                            <div class="tv-knob-inner"></div>
+                                        </div>
+                                        <div class="tv-speaker">
+                                            <div class="tv-speaker-slot"></div>
+                                            <div class="tv-speaker-slot"></div>
+                                            <div class="tv-speaker-slot"></div>
+                                            <div class="tv-speaker-slot"></div>
+                                            <div class="tv-speaker-slot"></div>
+                                            <div class="tv-speaker-slot"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Legs -->
+                            <div class="tv-leg-container">
+                                <div class="tv-leg tv-leg-left"></div>
+                                <div class="tv-leg tv-leg-right"></div>
+                            </div>
+                        </div>
+
+                        <div class="thp-media-layout relative mt-8 md:mt-12 lg:mt-12" data-aos="fade-up"
+                            data-aos-delay="100">
+                            <div class="flex flex-col lg:flex-row items-center lg:items-end justify-end gap-8 lg:gap-8">
+                                <div
+                                    class="thp-stats-container w-full lg:w-[48%] lg:ml-auto relative z-10 pb-8 md:pb-12">
+                                    <div class="text-center mb-10">
+                                        <span
+                                            class="thp-outputs-title uppercase tracking-[0.4em] text-xs md:text-sm font-bold text-warm-700 bg-warm-100 px-8 py-2 rounded-full border border-warm-200 shadow-sm">
+                                            outputs
+                                        </span>
+                                    </div>
+                                    <div class="grid grid-cols-2 gap-x-8 gap-y-12 md:gap-x-12 md:gap-y-16">
+                                        <div class="thp-stat-item flex flex-col items-center text-center">
+                                            <h4
+                                                class="thp-stat-num text-[2.6rem] md:text-[3rem] font-bold text-[#e67e22] leading-none mb-3">
+                                                <span class="count-up" data-target="20">1</span>+
+                                            </h4>
+                                            <p
+                                                class="thp-stat-desc text-[0.85rem] md:text-[0.95rem] text-gray-700 font-medium leading-relaxed max-w-[220px]">
+                                                broadcasts as an on-air<br>presenter/news anchor
+                                            </p>
+                                        </div>
+                                        <div class="thp-stat-item flex flex-col items-center text-center">
+                                            <h4
+                                                class="thp-stat-num text-[2.6rem] md:text-[3rem] font-bold text-[#e67e22] leading-none mb-3">
+                                                <span class="count-up" data-target="5">1</span>+
+                                            </h4>
+                                            <p
+                                                class="thp-stat-desc text-[0.85rem] md:text-[0.95rem] text-gray-700 font-medium leading-relaxed max-w-[220px]">
+                                                studio talk sessions<br>with guest interactions
+                                            </p>
+                                        </div>
+                                        <div class="thp-stat-item flex flex-col items-center text-center">
+                                            <h4
+                                                class="thp-stat-num text-[2.6rem] md:text-[3rem] font-bold text-[#e67e22] leading-none mb-3">
+                                                <span class="count-up" data-target="15">1</span>+
+                                            </h4>
+                                            <p
+                                                class="thp-stat-desc text-[0.85rem] md:text-[0.95rem] text-gray-700 font-medium leading-relaxed max-w-[220px]">
+                                                field-report videos,<br>filming, and coverage
+                                            </p>
+                                        </div>
+                                        <div class="thp-stat-item flex flex-col items-center text-center ml">
+                                            <h4
+                                                class="thp-stat-num text-[2.6rem] md:text-[3rem] font-bold text-[#e67e22] leading-none mb-3">
+                                                <span class="count-up" data-target="20">1</span>+
+                                            </h4>
+                                            <p
+                                                class="thp-stat-desc text-[0.85rem] md:text-[0.95rem] text-gray-700 font-medium leading-relaxed max-w-[220px]">
+                                                edited pieces from clips<br>to 15-min programs
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="thp-media-cutout-wrap relative w-full lg:w-[38%] flex justify-center lg:justify-end items-end">
+                                    <div class="thp-person-wrapper relative">
+                                        <img src="VTL_img/thp/anh_goc_phai.png" alt="Broadcast Professional"
+                                            class="thp-person-img w-auto h-[350px] md:h-[480px] object-contain object-bottom drop-shadow-[0_15px_40px_rgba(0,0,0,0.12)] relative z-20 block">
+                                        <div
+                                            class="thp-person-bg-blob absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-warm-100 rounded-full blur-3xl opacity-50 z-0">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Kinh nghiệm 3: Other Experiences -->
+                <div class="card exp-card exp-no-shimmer exp-card-interpreter-hint bg-gray-50 rounded-xl shadow-lg overflow-hidden transition duration-300 border hover:border-warm-700"
+                    data-tilt data-tilt-max="2" data-tilt-speed="400">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-3 text-gray-800"><span class="exp-num">03.</span> Vietnamese -
+                            English interpreter (Event-based)</h3>
+                        <p class="text-md font-semibold text-warm-600 mb-1">Role: Delivered real-time interpretation in
+                            academic and project discussions</p>
+                        <div class="inter-showcase mt-5" data-aos="fade-up" data-aos-delay="100">
+                            <div class="inter-callout inter-callout-role">
+                                <p class="inter-callout-label">responsibilities</p>
+                                <p class="inter-callout-body">Delivered real-time interpretation in academic and project
+                                    discussions</p>
+                            </div>
+
+                            <figure class="inter-main-figure">
+                                <a href="VTL_img/interpreter/1.jpg" class="inter-photo-link"
+                                    aria-label="Zoom interpreter badge photo">
+                                    <img src="VTL_img/interpreter/1.jpg" alt="Vietnamese - English interpreter"
+                                        loading="lazy" class="inter-photo inter-photo-main">
+                                </a>
+                                <figcaption class="inter-main-caption">Vietnamese - English Interpreter (Event-based)
+                                </figcaption>
+
+                                <div class="exp-thought-hint inter-thought-hint" aria-hidden="true">
+                                    <img src="VTL_img/Vũ Trà Ly.webp" alt="" class="exp-thought-avatar" loading="lazy">
+                                    <div class="exp-thought-bubble">Click a photo to zoom in.</div>
+                                </div>
+                            </figure>
+
+                            <div class="inter-stack-figures">
+                                <figure class="inter-sub-figure">
+                                    <a href="VTL_img/interpreter/2.jpg" class="inter-photo-link"
+                                        aria-label="Zoom interpreter event photo 1">
+                                        <img src="VTL_img/interpreter/2.jpg"
+                                            alt="Interpreter supporting discussion table" loading="lazy"
+                                            class="inter-photo inter-photo-sub">
+                                    </a>
+                                </figure>
+                                <figure class="inter-sub-figure">
+                                    <a href="VTL_img/interpreter/3.jpg" class="inter-photo-link"
+                                        aria-label="Zoom interpreter event photo 2">
+                                        <img src="VTL_img/interpreter/3.jpg"
+                                            alt="Interpreter supporting international interactions" loading="lazy"
+                                            class="inter-photo inter-photo-sub">
+                                    </a>
+                                </figure>
+                            </div>
+
+                            <div class="inter-callout inter-callout-output">
+                                <p class="inter-callout-label">outputs</p>
+                                <p class="inter-callout-body">Provided Vietnamese-English interpretation for</p>
+                                <p class="inter-callout-metric">20+</p>
+                                <p class="inter-callout-body">interactions between international universities and
+                                    Vietnamese attendees</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card exp-card exp-no-shimmer exp-card-interpreter-hint bg-gray-50 rounded-xl shadow-lg overflow-hidden transition duration-300 border hover:border-warm-700"
+                    data-tilt data-tilt-max="2" data-tilt-speed="400">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-3 text-gray-800"><span class="exp-num">04.</span> Featured
+                            student - Diplomatic Academy of Vietnam (2024)</h3>
+                        <p class="text-md font-semibold text-warm-600 mb-1">Role: Represented students in university
+                            admission and outreach activities</p>
+                        <p class="text-md font-semibold text-warm-600 mb-1">Authored two articles published on the
+                            official website of the Diplomatic Academy of Vietnam (under the Ministry of Foreign
+                            Affairs)</p>
+
+                        <div class="mt-4">
+                            <div id="carousel-3h" class="relative">
+                                <div class="overflow-hidden rounded-lg shadow-inner">
+                                    <div id="track-3h" class="flex transition-transform duration-500 ease-in-out"
+                                        style="transform: translateX(0%);">
+                                        <div class="flex-shrink-0 w-1/4 p-1"><img src="VTL_img/gmsv/1.jpg"
+                                                loading="lazy" class="w-full h-56 object-cover rounded-md aspect-[3/2]">
+                                        </div>
+                                        <div class="flex-shrink-0 w-1/4 p-1"><img src="VTL_img/gmsv/2.jpg"
+                                                loading="lazy" class="w-full h-56 object-cover rounded-md aspect-[3/2]">
+                                        </div>
+                                        <div class="flex-shrink-0 w-1/4 p-1"><img src="VTL_img/gmsv/3.jpg"
+                                                loading="lazy"
+                                                class="w-full h-56 object-cover rounded-md aspect-[3/2] object-top">
+                                        </div>
+                                        <div class="flex-shrink-0 w-1/4 p-1"><img src="VTL_img/gmsv/4.jpg"
+                                                loading="lazy" class="w-full h-56 object-cover rounded-md aspect-[3/2]">
+                                        </div>
+                                    </div>
+                                    <button id="prev-3h"
+                                        class="absolute left-0 top-1/2 -translate-y-1/2 bg-warm-500 bg-opacity-90 text-white p-2 rounded-full shadow-lg hover:bg-warm-700 transition z-10">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M15 19l-7-7 7-7" />
+                                        </svg>
+                                    </button>
+                                    <button id="next-3h"
+                                        class="absolute right-0 top-1/2 -translate-y-1/2 bg-warm-500 bg-opacity-90 text-white p-2 rounded-full shadow-lg hover:bg-warm-700 transition z-10">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M9 5l7 7-7 7" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="featured-student-stats-layout mt-6" data-aos="fade-up" data-aos-delay="100">
+                                <div class="featured-student-cutout-wrap" aria-hidden="true">
+                                    <img src="VTL_img/gmsv/cartoon.png" alt="" class="featured-student-cutout"
+                                        loading="lazy"
+                                        style="position: relative; left: -30px; margin-bottom: 1.5rem; bottom: 0; transform: none;">
+                                </div>
+                                <div class="featured-student-story-panel">
+                                    <p class="featured-story-kicker">Featured Content Snapshot</p>
+                                    <p class="featured-story-hint">Tap a story image to unfold the full article.</p>
+                                    <div class="featured-story-grid">
+                                        <article class="featured-story-item">
+                                            <a href="https://dav.edu.vn/cau-chuyen-van-hoa-va-truyen-thong/"
+                                                target="_blank" rel="noopener noreferrer" class="featured-story-link"
+                                                aria-label="Open details for Cau chuyen van hoa va truyen thong">
+                                                <img src="VTL_img/cauchuyenvanhoa.webp"
+                                                    alt="Câu chuyện văn hóa và truyền thông"
+                                                    class="featured-student-story-image" loading="lazy">
+                                            </a>
+                                            <p class="featured-story-caption">
+                                                Cau chuyen van hoa va truyen thong
+                                            </p>
+                                        </article>
+                                        <article class="featured-story-item">
+                                            <a href="https://dav.edu.vn/trai-nghiem-nam-nhat-tai-hoc-vien-ngoai-giao/"
+                                                target="_blank" rel="noopener noreferrer" class="featured-story-link"
+                                                aria-label="Open details for Trai nghiem nam nhat tai Hoc vien Ngoai giao">
+                                                <img src="VTL_img/trainghiemnamnhat.webp"
+                                                    alt="Trải nghiệm năm nhất tại Học viện Ngoại giao"
+                                                    class="featured-student-story-image" loading="lazy">
+                                            </a>
+                                            <p class="featured-story-caption">
+                                                Trai nghiem nam nhat tai Hoc vien Ngoai giao
+                                            </p>
+                                        </article>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card exp-card exp-no-shimmer bg-gray-50 rounded-xl shadow-lg overflow-hidden transition duration-300 border hover:border-warm-700"
+                    data-tilt data-tilt-max="2" data-tilt-speed="400">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-3 text-gray-800"><span class="exp-num">05.</span> Communication
+                            Ambassador</h3>
+                        <p class="text-md font-semibold text-warm-600 mb-1">Role: Communication ambassador for 10+
+                            events and youth-oriented organizations.</p>
+                        <div class="combo-56-showcase mt-5" data-aos="fade-up" data-aos-delay="100">
+                            <section class="combo-56-panel">
+                                <div id="carousel-3c" class="combo-56-carousel relative">
+                                    <div class="overflow-hidden rounded-lg shadow-inner">
+                                        <div id="track-3c" class="flex transition-transform duration-500 ease-in-out"
+                                            style="transform: translateX(0%);">
+                                            <div class="flex-shrink-0 w-1/4 p-1"><img src="VTL_img/dstt/1.jpg"
+                                                    alt="Communication Ambassador campaign visual 1" loading="lazy"
+                                                    class="combo-56-photo combo-56-photo-portrait"></div>
+                                            <div class="flex-shrink-0 w-1/4 p-1"><img src="VTL_img/dstt/2.jpg"
+                                                    alt="Communication Ambassador campaign visual 2" loading="lazy"
+                                                    class="combo-56-photo combo-56-photo-portrait"></div>
+                                            <div class="flex-shrink-0 w-1/4 p-1"><img src="VTL_img/dstt/3.jpg"
+                                                    alt="Communication Ambassador campaign visual 3" loading="lazy"
+                                                    class="combo-56-photo combo-56-photo-portrait"></div>
+                                            <div class="flex-shrink-0 w-1/4 p-1"><img src="VTL_img/dstt/4.jpg"
+                                                    alt="Communication Ambassador campaign visual 4" loading="lazy"
+                                                    class="combo-56-photo combo-56-photo-portrait"></div>
+                                            <div class="flex-shrink-0 w-1/4 p-1"><img src="VTL_img/dstt/5.jpg"
+                                                    alt="Communication Ambassador campaign visual 5" loading="lazy"
+                                                    class="combo-56-photo combo-56-photo-portrait"></div>
+                                            <div class="flex-shrink-0 w-1/4 p-1"><img src="VTL_img/dstt/6.jpg"
+                                                    alt="Communication Ambassador campaign visual 6" loading="lazy"
+                                                    class="combo-56-photo combo-56-photo-portrait"></div>
+                                            <div class="flex-shrink-0 w-1/4 p-1"><img src="VTL_img/dstt/7.jpg"
+                                                    alt="Communication Ambassador campaign visual 7" loading="lazy"
+                                                    class="combo-56-photo combo-56-photo-portrait"></div>
+                                            <div class="flex-shrink-0 w-1/4 p-1"><img src="VTL_img/dstt/8.jpg"
+                                                    alt="Communication Ambassador campaign visual 8" loading="lazy"
+                                                    class="combo-56-photo combo-56-photo-portrait"></div>
+                                            <div class="flex-shrink-0 w-1/4 p-1"><img src="VTL_img/dstt/9.jpg"
+                                                    alt="Communication Ambassador campaign visual 9" loading="lazy"
+                                                    class="combo-56-photo combo-56-photo-portrait"></div>
+                                            <div class="flex-shrink-0 w-1/4 p-1"><img src="VTL_img/dstt/10.jpg"
+                                                    alt="Communication Ambassador campaign visual 10" loading="lazy"
+                                                    class="combo-56-photo combo-56-photo-portrait"></div>
+                                            <div class="flex-shrink-0 w-1/4 p-1"><img src="VTL_img/dstt/11.jpg"
+                                                    alt="Communication Ambassador campaign visual 11" loading="lazy"
+                                                    class="combo-56-photo combo-56-photo-portrait"></div>
+                                            <div class="flex-shrink-0 w-1/4 p-1"><img src="VTL_img/dstt/12.jpg"
+                                                    alt="Communication Ambassador campaign visual 12" loading="lazy"
+                                                    class="combo-56-photo combo-56-photo-portrait"></div>
+                                            <div class="flex-shrink-0 w-1/4 p-1"><img src="VTL_img/dstt/13.jpg"
+                                                    alt="Communication Ambassador campaign visual 13" loading="lazy"
+                                                    class="combo-56-photo combo-56-photo-portrait"></div>
+                                            <div class="flex-shrink-0 w-1/4 p-1"><img src="VTL_img/dstt/14.jpg"
+                                                    alt="Communication Ambassador campaign visual 14" loading="lazy"
+                                                    class="combo-56-photo combo-56-photo-portrait"></div>
+                                            <div class="flex-shrink-0 w-1/4 p-1"><img src="VTL_img/dstt/15.jpg"
+                                                    alt="Communication Ambassador campaign visual 15" loading="lazy"
+                                                    class="combo-56-photo combo-56-photo-portrait"></div>
+                                            <div class="flex-shrink-0 w-1/4 p-1"><img src="VTL_img/dstt/16.jpg"
+                                                    alt="Communication Ambassador campaign visual 16" loading="lazy"
+                                                    class="combo-56-photo combo-56-photo-portrait"></div>
+                                        </div>
+                                    </div>
+                                    <button id="prev-3c"
+                                        class="absolute left-0 top-1/2 -translate-y-1/2 bg-warm-500 bg-opacity-90 text-white p-2 rounded-full shadow-lg hover:bg-warm-700 transition z-10"><svg
+                                            xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M15 19l-7-7 7-7" />
+                                        </svg></button>
+                                    <button id="next-3c"
+                                        class="absolute right-0 top-1/2 -translate-y-1/2 bg-warm-500 bg-opacity-90 text-white p-2 rounded-full shadow-lg hover:bg-warm-700 transition z-10"><svg
+                                            xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M9 5l7 7-7 7" />
+                                        </svg></button>
+                                </div>
+                                <p class="combo-56-caption"><strong>Communication Ambassador</strong> for 10+ events and
+                                    youth-oriented organizations, contributing to increasing visibility and outreach of
+                                    meaningful programs and projects to young audiences.</p>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card exp-card exp-no-shimmer bg-gray-50 rounded-xl shadow-lg overflow-hidden transition duration-300 border hover:border-warm-700"
+                    data-tilt data-tilt-max="2" data-tilt-speed="400">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-3 text-gray-800"><span class="exp-num">06.</span> Scientific
+                            Research Team Leader</h3>
+                        <p class="text-md font-semibold text-warm-600 mb-1">Role: Team leader of a scientific research
+                            project awarded Third Prize (Faculty level) and Honorable mention (Academy level).</p>
+                        <div class="combo-56-showcase mt-5" data-aos="fade-up" data-aos-delay="100">
+                            <section class="combo-56-panel">
+                                <div class="combo-56-bottom-grid">
+                                    <figure><img src="VTL_img/nckh/1.webp" alt="Scientific research team members"
+                                            loading="lazy" class="combo-56-photo js-static-zoom"></figure>
+                                    <figure><img src="VTL_img/nckh/2.webp" alt="Scientific research award ceremony"
+                                            loading="lazy" class="combo-56-photo js-static-zoom"></figure>
+                                    <figure><img src="VTL_img/nckh/3.webp" alt="Scientific research certificate"
+                                            loading="lazy" class="combo-56-photo js-static-zoom"></figure>
+                                    <figure><img src="VTL_img/nckh/4.webp" alt="Scientific research project"
+                                            loading="lazy" class="combo-56-photo js-static-zoom"></figure>
+                                    <div class="exp-thought-hint inter-thought-hint" aria-hidden="true"
+                                        style="margin-bottom: 0.5rem;">
+                                        <img src="VTL_img/Vũ Trà Ly.webp" alt="" class="exp-thought-avatar"
+                                            loading="lazy">
+                                        <div class="exp-thought-bubble">Click to zoom</div>
+                                    </div>
+                                </div>
+                                <p class="combo-56-caption"><strong>Team leader</strong> of the scientific research
+                                    project that won Third Prize at the faculty level.</p>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card exp-card exp-no-shimmer bg-gray-50 rounded-xl shadow-lg overflow-hidden transition duration-300 border hover:border-warm-700"
+                    data-tilt data-tilt-max="2" data-tilt-speed="400">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-3 text-gray-800"><span class="exp-num">07.</span> Project-based
+                            head roles</h3>
+                        <p class="text-md font-semibold text-warm-600 mb-1">Role: Head of Organization, Head of
+                            Communication, Head of Human Resources</p>
+                        <div class="head-roles-showcase mt-5" data-aos="fade-up" data-aos-delay="100">
+                            <section class="head-role-panel">
+                                <div class="head-grid head-grid-2x2">
+                                    <figure><img src="VTL_img/head/1.jpg" alt="University Window activity highlight"
+                                            loading="lazy" class="head-role-photo js-static-zoom"></figure>
+                                    <figure><img src="VTL_img/head/2.jpg" alt="University Window team photo"
+                                            loading="lazy" class="head-role-photo js-static-zoom"></figure>
+                                    <figure><img src="VTL_img/head/3.jpg" alt="University Window organizing members"
+                                            loading="lazy" class="head-role-photo js-static-zoom"></figure>
+                                    <figure><img src="VTL_img/head/7.jpg" alt="University Window event audience"
+                                            loading="lazy" class="head-role-photo js-static-zoom"></figure>
+                                </div>
+                                <p class="head-role-caption"><strong>Chair of the Organizing Committee</strong> for a
+                                    self-discovery and career orientation event featuring three professional guest
+                                    speakers and engaging more than 300 high school students across Hai Phong.</p>
+                            </section>
+
+                            <section class="head-role-panel">
+                                <div class="head-grid head-grid-highlight">
+                                    <figure class="head-highlight-main"><img src="VTL_img/head/5.jpg"
+                                            alt="The AGEE Project portrait" loading="lazy"
+                                            class="head-role-photo js-static-zoom"></figure>
+                                    <figure><img src="VTL_img/head/6.jpg" alt="The AGEE Project media output"
+                                            loading="lazy" class="head-role-photo js-static-zoom"></figure>
+                                    <figure><img src="VTL_img/head/4.jpg" alt="The AGEE Project social content"
+                                            loading="lazy" class="head-role-photo js-static-zoom"></figure>
+                                </div>
+                                <p class="head-role-caption"><strong>Head of Content, I-MC PRO 2025 Competition</strong>
+                                    Coordinated with high-profile speakers and judges from VTV, Vietnam Today,
+                                    Vietnamese Embassies for competition sessions.</p>
+                            </section>
+
+                            <section class="head-role-panel">
+                                <div class="head-grid head-grid-2x2">
+                                    <figure><img src="VTL_img/head/8.png" alt="Head of Communication team activity"
+                                            loading="lazy" class="head-role-photo js-static-zoom"></figure>
+                                    <figure><img src="VTL_img/head/9.png" alt="Head of Communication workshop"
+                                            loading="lazy" class="head-role-photo js-static-zoom"></figure>
+                                    <figure><img src="VTL_img/head/10.png" alt="Head of Communication group session"
+                                            loading="lazy" class="head-role-photo js-static-zoom"></figure>
+                                    <figure><img src="VTL_img/head/11.jpg" alt="Head of Communication project event"
+                                            loading="lazy" class="head-role-photo js-static-zoom"></figure>
+                                </div>
+                                <p class="head-role-caption"><strong>Head of Human Resources gen 1</strong> of The AGEE
+                                    Project - a nationwide initiative on sexuality education for adolescents.</p>
+                            </section>
+
+                            <section class="head-role-panel">
+                                <div class="head-grid head-grid-3col">
+                                    <figure><img src="VTL_img/head/12.jpg" alt="Program collaboration event"
+                                            loading="lazy" class="head-role-photo js-static-zoom"></figure>
+                                    <figure><img src="VTL_img/head/13.jpg" alt="Community support activity"
+                                            loading="lazy" class="head-role-photo js-static-zoom"></figure>
+                                    <figure><img src="VTL_img/head/14.webp" alt="Volunteer and events collaboration"
+                                            loading="lazy" class="head-role-photo js-static-zoom"></figure>
+                                </div>
+                                <p class="head-role-caption"><strong>Head of Communication</strong> for multiple
+                                    student-led projects and initiatives.</p>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card exp-card exp-no-shimmer bg-gray-50 rounded-xl shadow-lg overflow-hidden transition duration-300 border hover:border-warm-700"
+                    data-tilt data-tilt-max="2" data-tilt-speed="400">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-3 text-gray-800"><span class="exp-num">08.</span> Content
+                            creator & influencer</h3>
+                        <div class="creator-showcase mt-4" data-aos="fade-up" data-aos-delay="100">
+                            <div class="creator-row creator-row-hero">
+                                <div id="carousel-3i" class="creator-hero-carousel relative">
+                                    <div class="overflow-hidden rounded-[0.82rem]">
+                                        <div id="track-3i" class="flex transition-transform duration-500 ease-in-out"
+                                            style="transform: translateX(0%);">
+                                            <figure class="creator-hero-photo flex-shrink-0 w-full">
+                                                <img src="VTL_img/content_creator/1.png"
+                                                    alt="Content creation workflow 1" loading="lazy"
+                                                    class="creator-photo js-static-zoom">
+                                            </figure>
+                                            <figure class="creator-hero-photo flex-shrink-0 w-full">
+                                                <img src="VTL_img/content_creator/2.jpg"
+                                                    alt="Content creation workflow 2" loading="lazy"
+                                                    class="creator-photo js-static-zoom">
+                                            </figure>
+                                        </div>
+                                    </div>
+                                    <button id="prev-3i" class="carousel-nav-button prev"
+                                        aria-label="Previous creator image">
+                                        <i data-lucide="chevron-left" class="w-5 h-5 text-gray-800"></i>
+                                    </button>
+                                    <button id="next-3i" class="carousel-nav-button next"
+                                        aria-label="Next creator image">
+                                        <i data-lucide="chevron-right" class="w-5 h-5 text-gray-800"></i>
+                                    </button>
+                                </div>
+                                <article class="creator-direction-card">
+                                    <p class="creator-card-kicker">Content Direction</p>
+                                    <h4 class="creator-card-title">Educational + lifestyle storytelling with high
+                                        shareability.</h4>
+                                    <p class="creator-card-copy">Role:
+                                        <br>- Featured in a brand iTVC, gaining on-camera performance experience
+                                        <br>- Created short-form and vlog content across social platforms
+                                        <br>- Produced KOC content for product promotion and audience engagement
+                                    </p>
+                                </article>
+                            </div>
+
+                            <div id="carousel-3j" class="creator-row creator-row-mockups-carousel relative">
+                                <div class="overflow-hidden rounded-[0.82rem]">
+                                    <div id="track-3j" class="flex transition-transform duration-500 ease-in-out"
+                                        style="transform: translateX(0%);">
+                                        <article class="creator-phone-card flex-shrink-0 p-1">
+                                            <div class="creator-phone-frame">
+                                                <img src="VTL_img/content_creator/3.jpg" alt="Top viewed content 1"
+                                                    loading="lazy" class="creator-phone-photo js-static-zoom">
+                                            </div>
+                                        </article>
+                                        <article class="creator-phone-card flex-shrink-0 p-1">
+                                            <div class="creator-phone-frame">
+                                                <img src="VTL_img/content_creator/4.jpg" alt="Top viewed content 2"
+                                                    loading="lazy" class="creator-phone-photo js-static-zoom">
+                                            </div>
+                                        </article>
+                                        <article class="creator-phone-card flex-shrink-0 p-1">
+                                            <div class="creator-phone-frame">
+                                                <img src="VTL_img/content_creator/10.jpg" alt="Top viewed content 3"
+                                                    loading="lazy" class="creator-phone-photo js-static-zoom">
+                                            </div>
+                                        </article>
+                                        <article class="creator-phone-card flex-shrink-0 p-1">
+                                            <div class="creator-phone-frame">
+                                                <img src="VTL_img/content_creator/12.jpg" alt="Top viewed content 4"
+                                                    loading="lazy" class="creator-phone-photo js-static-zoom">
+                                            </div>
+                                        </article>
+                                        <article class="creator-phone-card flex-shrink-0 p-1">
+                                            <div class="creator-phone-frame">
+                                                <img src="VTL_img/content_creator/7.jpg" alt="Top viewed content 5"
+                                                    loading="lazy" class="creator-phone-photo js-static-zoom">
+                                            </div>
+                                        </article>
+                                        <article class="creator-phone-card flex-shrink-0 p-1">
+                                            <div class="creator-phone-frame">
+                                                <img src="VTL_img/content_creator/6.jpg" alt="Top viewed content 6"
+                                                    loading="lazy" class="creator-phone-photo js-static-zoom">
+                                            </div>
+                                        </article>
+                                        <article class="creator-phone-card flex-shrink-0 p-1">
+                                            <div class="creator-phone-frame">
+                                                <img src="VTL_img/content_creator/9.jpg" alt="Top viewed content 7"
+                                                    loading="lazy" class="creator-phone-photo js-static-zoom">
+                                            </div>
+                                        </article>
+                                        <article class="creator-phone-card flex-shrink-0 p-1">
+                                            <div class="creator-phone-frame">
+                                                <img src="VTL_img/content_creator/5.jpg" alt="Top viewed content 8"
+                                                    loading="lazy" class="creator-phone-photo js-static-zoom">
+                                            </div>
+                                        </article>
+                                        <article class="creator-phone-card flex-shrink-0 p-1">
+                                            <div class="creator-phone-frame">
+                                                <img src="VTL_img/content_creator/11.jpg" alt="Top viewed content 9"
+                                                    loading="lazy" class="creator-phone-photo js-static-zoom">
+                                            </div>
+                                        </article>
+                                        <article class="creator-phone-card flex-shrink-0 p-1">
+                                            <div class="creator-phone-frame">
+                                                <img src="VTL_img/content_creator/8.jpg" alt="Top viewed content 10"
+                                                    loading="lazy" class="creator-phone-photo js-static-zoom">
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                                <button id="prev-3j" class="carousel-nav-button prev"
+                                    aria-label="Previous viewed content group">
+                                    <i data-lucide="chevron-left" class="w-5 h-5 text-gray-800"></i>
+                                </button>
+                                <button id="next-3j" class="carousel-nav-button next"
+                                    aria-label="Next viewed content group">
+                                    <i data-lucide="chevron-right" class="w-5 h-5 text-gray-800"></i>
+                                </button>
+                            </div>
+
+                            <div class="creator-row creator-row-stats">
+                                <div class="creator-stats-panel">
+                                    <p class="creator-card-kicker">Performance Snapshot</p>
+                                    <div class="creator-stats-grid">
+                                        <article class="creator-stat-item">
+                                            <p class="creator-stat-label">Reach</p>
+                                            <p class="creator-stat-value"><span class="count-up"
+                                                    data-target="52">1</span>K+</p>
+                                        </article>
+                                        <article class="creator-stat-item">
+                                            <p class="creator-stat-label">Engagement Rate</p>
+                                            <p class="creator-stat-value" id="creator-engagement-rate"
+                                                style="opacity:0;transform:scale(0.7);transition:opacity 0.5s,transform 0.5s;">
+                                                3.6%</p>
+                                        </article>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card exp-card exp-no-shimmer bg-gray-50 rounded-xl shadow-lg overflow-hidden transition duration-300 border hover:border-warm-700"
+                    data-tilt data-tilt-max="2" data-tilt-speed="400">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-3 text-gray-800"><span class="exp-num">09.</span> Member &
+                            collaborator of the Communications and Events Committees for programs from the school to the
+                            city level.</h3>
+                        <p class="text-md font-semibold text-warm-600 mb-1">Role: Member & collaborator</p>
+                        <div class="mt-4 member-portfolio-wrap">
+                            <div class="member-portfolio-grid" role="list">
+                                <figure class="member-portfolio-item member-hero" role="listitem">
+                                    <img src="VTL_img/member/1.webp" alt="Individual role in event communication"
+                                        loading="lazy" class="member-portfolio-photo js-static-zoom"
+                                        style="object-position: center 40%;">
+                                </figure>
+                                <figure class="member-portfolio-item" role="listitem">
+                                    <img src="VTL_img/member/2.jpg"
+                                        alt="Individual coordination during committee program" loading="lazy"
+                                        class="member-portfolio-photo js-static-zoom"
+                                        style="object-position: center 55%; transform: scale(1.7);">
+                                </figure>
+                                <figure class="member-portfolio-item" role="listitem">
+                                    <img src="VTL_img/member/4.png"
+                                        alt="Presentation and personal contribution at event" loading="lazy"
+                                        class="member-portfolio-photo js-static-zoom"
+                                        style="object-position: center 32%;">
+                                </figure>
+                                <figure class="member-portfolio-item" role="listitem">
+                                    <img src="VTL_img/member/10.jpg"
+                                        alt="Independent support in communications workflow" loading="lazy"
+                                        class="member-portfolio-photo js-static-zoom"
+                                        style="object-position: center 42%;">
+                                </figure>
+                                <figure class="member-portfolio-item member-focus" role="listitem">
+                                    <img src="VTL_img/member/5.jpg" alt="Core teamwork activity in event execution"
+                                        loading="lazy" class="member-portfolio-photo js-static-zoom"
+                                        style="object-position: center 48%;">
+                                </figure>
+                                <figure class="member-portfolio-item" role="listitem">
+                                    <img src="VTL_img/member/6.jpg" alt="Team collaboration in communication operations"
+                                        loading="lazy" class="member-portfolio-photo js-static-zoom"
+                                        style="object-position: center 44%;">
+                                </figure>
+                                <figure class="member-portfolio-item" role="listitem">
+                                    <img src="VTL_img/member/7.jpg" alt="Group activity and event teamwork"
+                                        loading="lazy" class="member-portfolio-photo js-static-zoom"
+                                        style="object-position: center 40%;">
+                                </figure>
+                                <figure class="member-portfolio-item" role="listitem">
+                                    <img src="VTL_img/member/8.jpg" alt="Active teamwork in communications committee"
+                                        loading="lazy" class="member-portfolio-photo js-static-zoom"
+                                        style="object-position: center 46%;">
+                                </figure>
+                                <figure class="member-portfolio-item" role="listitem">
+                                    <img src="VTL_img/member/9.jpg" alt="Large event audience and scene" loading="lazy"
+                                        class="member-portfolio-photo js-static-zoom"
+                                        style="object-position: center 36%;">
+                                </figure>
+                                <figure class="member-portfolio-item" role="listitem">
+                                    <img src="VTL_img/member/3.webp" alt="City-level event collaboration moment"
+                                        loading="lazy" class="member-portfolio-photo js-static-zoom"
+                                        style="object-position: center 40%;">
+                                </figure>
+                                <figure class="member-portfolio-item" role="listitem">
+                                    <img src="VTL_img/member/11.webp" alt="Large-scale event communication support"
+                                        loading="lazy" class="member-portfolio-photo js-static-zoom"
+                                        style="object-position: center 35%;">
+                                </figure>
+                                <figure class="member-portfolio-item" role="listitem">
+                                    <img src="VTL_img/member/12.jpg" alt="Final large event highlight" loading="lazy"
+                                        class="member-portfolio-photo js-static-zoom"
+                                        style="object-position: center 38%;">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 04. Mẫu Sản Phẩm (Work Sample - Video/Content) -->
+                <div class="card exp-card exp-no-shimmer bg-gray-50 rounded-xl shadow-lg overflow-hidden transition duration-300 border hover:border-warm-700 p-8 ws-card"
+                    id="worksample" data-aos="fade-up">
+                    <h3 class="text-3xl font-bold mb-4 text-gray-800 border-b pb-2">Work Sample (Video/Content)</h3>
+                    <p class="text-md font-semibold text-warm-600 mb-4">Notable works during work and study</p>
+                    <div class="flex flex-col gap-10">
+                        <!-- Video Samples -->
+                        <div class="border-b pb-4 ws-block ws-video-block-top order-2" data-aos="fade-up"
+                            data-aos-delay="80">
+                            <div class="ws-video-header-row">
+                                <h4 class="text-xl font-bold text-gray-700 mb-0 flex items-center ws-subheading"><i
+                                        data-lucide="monitor-play" class="w-5 h-5 text-warm-500 mr-2"></i> VIDEO &
+                                    TELEVISION (THP & ELCOM)</h4>
+                            </div>
+                            <br>
+                            <div class="grid md:grid-cols-2 gap-6 ws-video-grid">
+                                <!-- Mẫu 1 (THP) -->
+                                <a href="http://thhp.vn/den-hai-phong-di-long-vong-den-nghe-32613.html" target="_blank"
+                                    class="ws-video-card block relative group hover:scale-[1.02] transition duration-300
+                                shadow-lg rounded-xl overflow-hidden bg-white hover:shadow-xl relative h-full">
+                                    <div class="relative overflow-hidden aspect-[16/9]">
+                                        <img src="VTL_img/bg_temp.webp"
+                                            alt="Thumbnail Đến Hải Phòng, đi lòng vòng: Đền Nghè" loading="lazy"
+                                            class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+                                        <div
+                                            class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-10 transition duration-300">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                                                viewBox="0 0 24 24" fill="currentColor"
+                                                class="text-white opacity-80 group-hover:opacity-100">
+                                                <path d="M7 6v12l10-6z" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="p-4 flex flex-col gap-1 flex-1">
+                                        <p class="ws-video-title font-bold text-warm-600 leading-snug mb-1">Đến Hải
+                                            Phòng, đi lòng vòng: Đền Nghè</p>
+                                        <p class="ws-video-desc text-sm text-gray-700 leading-relaxed flex-1">
+                                            Description: A feature introducing iconic cultural spots in Hai Phong,
+                                            created to build local pride and promote the city to wider audiences.</p>
+                                        <p
+                                            class="ws-video-role text-xs text-gray-500 mt-2 pt-2 border-t border-gray-100">
+                                            Role: Content scripting, on-screen host/experience lead, post-production
+                                            editing</p>
+                                    </div>
+
+                                    <div class="absolute inset-0 bg-black bg-opacity-40 rounded-lg 
+                                                flex items-center justify-center opacity-0 
+                                                group-hover:opacity-100 transition duration-300">
+                                        <span class="text-white font-semibold text-sm">
+                                            Access to watch video →
+                                        </span>
+                                    </div>
+                                </a>
+
+                                <!-- 2 (THP) -->
+                                <a href="https://thhp.vn/cua-so-du-hoc-lo-trinh-du-hoc-tot-nghiep-khi-moi-20-tuoi-33807.html"
+                                    target="_blank" class="ws-video-card block relative group hover:scale-[1.02] transition duration-300
+                                shadow-lg rounded-xl overflow-hidden bg-white hover:shadow-xl relative h-full">
+                                    <div class="relative overflow-hidden aspect-[16/9]">
+                                        <img src="VTL_img/cua_so_du_hoc.webp" loading="lazy"
+                                            class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+                                        <div
+                                            class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-10 transition duration-300">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                                                viewBox="0 0 24 24" fill="currentColor"
+                                                class="text-white opacity-80 group-hover:opacity-100">
+                                                <path d="M7 6v12l10-6z" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="p-4 flex flex-col gap-1 flex-1">
+                                        <p class="ws-video-title font-bold text-warm-600 leading-snug mb-1">Cửa sổ du
+                                            học: Lộ trình du học tốt nghiệp khi mới 20 tuổi</p>
+                                        <p class="ws-video-desc text-sm text-gray-700 leading-relaxed flex-1">
+                                            Description: A program episode highlighting effective study-abroad pathways
+                                            for young students, built for THP's educational TV content.</p>
+                                        <p
+                                            class="ws-video-role text-xs text-gray-500 mt-2 pt-2 border-t border-gray-100">
+                                            Role: Developed interview question sets for guests, hosted TV talk shows,
+                                            post-production editing</p>
+                                    </div>
+
+                                    <div class="absolute inset-0 bg-black bg-opacity-40 rounded-lg 
+                                                flex items-center justify-center opacity-0 
+                                                group-hover:opacity-100 transition duration-300">
+                                        <span class="text-white font-semibold text-sm">
+                                            Access to watch video →
+                                        </span>
+                                    </div>
+                                </a>
+
+                                <!-- 4 (ELCOM) -->
+                                <a href="https://thhp.vn/ngay-nua-de-yeu-thuong-mang-yeu-thuong-den-voi-trung-tam-nuoi-duong-bao-tro-xa-hoi-hai-phong-31896.html"
+                                    target="_blank" class="ws-video-card block relative group hover:scale-[1.02] transition duration-300
+                                shadow-lg rounded-xl overflow-hidden bg-white hover:shadow-xl relative h-full">
+                                    <div class="relative overflow-hidden aspect-[16/9]">
+                                        <img src="VTL_img/23.png" alt="Thumbnail Đền Hải Phòng, đi lòng vòng: Đền Nghè"
+                                            loading="lazy"
+                                            class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+                                        <div
+                                            class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-10 transition duration-300">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                                                viewBox="0 0 24 24" fill="currentColor"
+                                                class="text-white opacity-80 group-hover:opacity-100">
+                                                <path d="M7 6v12l10-6z" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="p-4 flex flex-col gap-1 flex-1">
+                                        <p class="ws-video-title font-bold text-warm-600 leading-snug mb-1">Ngày nữa để
+                                            yêu thương: Mang yêu thương đến với Trung tâm Nuôi dưỡng Bảo trợ xã hội Hải
+                                            Phòng</p>
+                                        <p class="ws-video-desc text-sm text-gray-700 leading-relaxed flex-1">
+                                            Description: A human-interest news feature portraying difficult life stories
+                                            and the compassionate support activities.</p>
+                                        <p
+                                            class="ws-video-role text-xs text-gray-500 mt-2 pt-2 border-t border-gray-100">
+                                            Role: Field crew support, interview question design, on-site interviews,
+                                            rough-cut editing</p>
+                                    </div>
+                                    <div class="absolute inset-0 bg-black bg-opacity-40 rounded-lg 
+                                                flex items-center justify-center opacity-0 
+                                                group-hover:opacity-100 transition duration-300">
+                                        <span class="text-white font-semibold text-sm">
+                                            Access to view the video →
+                                        </span>
+                                    </div>
+                                </a>
+                                <!-- Mẫu 3 (THP) -->
+                                <a href="https://www.facebook.com/reel/1033367111306443" target="_blank" class="ws-video-card block relative group hover:scale-[1.02] transition duration-300
+                                shadow-lg rounded-xl overflow-hidden bg-white hover:shadow-xl relative h-full">
+                                    <div class="relative overflow-hidden aspect-[16/9]">
+                                        <img src="VTL_img/khieuvu.png"
+                                            alt="Thumbnail Đền Hải Phòng, đi lòng vòng: Đền Nghè" loading="lazy"
+                                            class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+                                        <div
+                                            class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-10 transition duration-300">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                                                viewBox="0 0 24 24" fill="currentColor"
+                                                class="text-white opacity-80 group-hover:opacity-100">
+                                                <path d="M7 6v12l10-6z" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="p-4 flex flex-col gap-1 flex-1">
+                                        <p class="ws-video-title font-bold text-warm-600 leading-snug mb-1">Khiêu vũ
+                                            vườn hoa - Góc sống vui của nhiều người dân Hải Phòng</p>
+                                        <p class="ws-video-desc text-sm text-gray-700 leading-relaxed flex-1">
+                                            Description: A short experiential piece showcasing community activities,
+                                            broadcast on THP Television and its digital platforms.</p>
+                                        <p
+                                            class="ws-video-role text-xs text-gray-500 mt-2 pt-2 border-t border-gray-100">
+                                            Role: Content scripting, on-screen host, participant interviews,
+                                            post-production editing</p>
+                                    </div>
+                                    <div class="absolute inset-0 bg-black bg-opacity-40 rounded-lg 
+                                                flex items-center justify-center opacity-0 
+                                                group-hover:opacity-100 transition duration-300">
+                                        <span class="text-white font-semibold text-sm">
+                                            Access to watch video →
+                                        </span>
+                                    </div>
+                                </a>
+
+                                <!-- Mẫu 5 (ELCOM) -->
+                                <a href="https://www.facebook.com/reel/668343582625550" target="_blank" class="ws-video-card block relative group hover:scale-[1.02] transition duration-300
+                                shadow-lg rounded-xl overflow-hidden bg-white hover:shadow-xl relative h-full">
+                                    <div class="relative overflow-hidden aspect-[16/9]">
+                                        <img src="VTL_img/gene.png" alt="Quốc tế Thiếu nhi 1/6 tại Elcom cỡ này"
+                                            loading="lazy"
+                                            class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+                                        <div
+                                            class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-10 transition duration-300">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                                                viewBox="0 0 24 24" fill="currentColor"
+                                                class="text-white opacity-80 group-hover:opacity-100">
+                                                <path d="M7 6v12l10-6z" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="p-4 flex flex-col gap-1 flex-1">
+                                        <p class="ws-video-title font-bold text-warm-600 leading-snug mb-1">Lộ trình
+                                            “cất cánh” của E-GEN Season 3 có gì đặc biệt?</p>
+                                        <p class="ws-video-desc text-sm text-gray-700 leading-relaxed flex-1">
+                                            Description: A video introducing the journey, roadmap, and key milestones of
+                                            E-GEN Season 3 internship program.</p>
+                                        <p
+                                            class="ws-video-role text-xs text-gray-500 mt-2 pt-2 border-t border-gray-100">
+                                            Role: Filming, on-screen presence, post-production editing</p>
+                                    </div>
+                                    <div class="absolute inset-0 bg-black bg-opacity-40 rounded-lg 
+                                                flex items-center justify-center opacity-0 
+                                                group-hover:opacity-100 transition duration-300">
+                                        <span class="text-white font-semibold text-sm">
+                                            Access to view the video →
+                                        </span>
+                                    </div>
+                                </a>
+                                <!-- Mẫu 6 (ELCOM) -->
+                                <a href="https://youtube.com/shorts/g7r0n8gqMwE?si=sOLitwO6ViEMJwKe" target="_blank"
+                                    class="ws-video-card block relative group hover:scale-[1.02] transition duration-300
+                                shadow-lg rounded-xl overflow-hidden bg-white hover:shadow-xl relative h-full">
+                                    <div class="relative overflow-hidden aspect-[16/9]">
+                                        <img src="VTL_img/trungthu.png"
+                                            alt="Thumbnail Đền Hải Phòng, đi lòng vòng: Đền Nghè" loading="lazy"
+                                            class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+                                        <div
+                                            class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-10 transition duration-300">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                                                viewBox="0 0 24 24" fill="currentColor"
+                                                class="text-white opacity-80 group-hover:opacity-100">
+                                                <path d="M7 6v12l10-6z" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="p-4 flex flex-col gap-1 flex-1">
+                                        <p class="ws-video-title font-bold text-warm-600 leading-snug mb-1">Trung thu
+                                            ELCOM 2025</p>
+                                        <p class="ws-video-desc text-sm text-gray-700 leading-relaxed flex-1">
+                                            Description: A recap video covering the Mid-Autumn gift-giving event for
+                                            ELCOM employees.</p>
+                                        <p
+                                            class="ws-video-role text-xs text-gray-500 mt-2 pt-2 border-t border-gray-100">
+                                            Role: Post-production editing</p>
+                                    </div>
+                                    <div class="absolute inset-0 bg-black bg-opacity-40 rounded-lg 
+                                                flex items-center justify-center opacity-0 
+                                                group-hover:opacity-100 transition duration-300">
+                                        <span class="text-white font-semibold text-sm">
+                                            Access to view the video →
+                                        </span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Content Samples -->
+                        <div class="border-b pb-4 ws-block ws-articles order-0" data-aos="fade-up" data-aos-delay="120">
+                            <h4 class="text-xl font-bold text-gray-700 mb-4 flex items-center ws-subheading"><i
+                                    data-lucide="file-text" class="w-5 h-5 text-warm-500 mr-2"></i> ARTICLES AND
+                                CONTENTS (ELCOM AND NEWSPAPERS)</h4>
+                            <div class="grid md:grid-cols-2 gap-6 ws-articles-grid">
+                                <!-- Mẫu 5 (Báo chí) -->
+                                <a href="https://vtv.vn/cung-gioi-tre-viet-tiep-cau-chuyen-van-hoa-100250623115138698.htm"
+                                    target="_blank" class="ws-article-card ws-article-priority block relative group hover:scale-[1.02] transition duration-300
+                                shadow-lg rounded-xl overflow-hidden bg-white hover:shadow-xl relative h-full">
+                                    <div class="relative overflow-hidden aspect-[16/9]">
+                                        <img src="VTL_img/18.png" alt="Cùng giới trẻ viết tiếp câu chuyện hòa bình"
+                                            loading="lazy"
+                                            class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+                                        <div
+                                            class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-10 transition duration-300">
+                                        </div>
+                                    </div>
+                                    <div class="p-4 flex flex-col flex-1">
+                                        <p class="font-bold text-warm-600 truncate">Cùng giới trẻ viết tiếp câu chuyện
+                                            hòa bình</p>
+                                        <p class="text-xs text-gray-500 mb-2">Role: Content development, interview
+                                            preparation, contacting sources, field photos & videos, article writing</p>
+                                        <p class="text-sm text-gray-700 flex-1">Description: A feature article on how
+                                            young people embrace and promote cultural values; published on VTV News and
+                                            Kinh Te & Do Thi Newspaper.</p>
+                                    </div>
+                                    <div class="absolute inset-0 bg-black bg-opacity-40 rounded-lg 
+                                                flex items-center justify-center opacity-0 
+                                                group-hover:opacity-100 transition duration-300">
+                                        <span class="text-white font-semibold text-sm">
+                                            Access to view the article →
+                                        </span>
+                                    </div>
+                                </a>
+                                <!-- Mẫu 6 (ELCOM) -->
+                                <a href="https://vtv.vn/xa-hoi/theo-chan-dai-ta-nguyen-duc-luan-ve-mien-ky-uc-khang-chien-2025043017040165.htm"
+                                    target="_blank" class="ws-article-card ws-article-priority block relative group hover:scale-[1.02] transition duration-300
+                                shadow-lg rounded-xl overflow-hidden bg-white hover:shadow-xl relative h-full">
+                                    <div class="relative overflow-hidden aspect-[16/9]">
+                                        <img src="VTL_img/19.png"
+                                            alt="Theo chân Đại tá Nguyễn Đức Luận về miền ký ức kháng chiến"
+                                            loading="lazy"
+                                            class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+                                        <div
+                                            class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-10 transition duration-300">
+                                        </div>
+                                    </div>
+                                    <div class="p-4 flex flex-col flex-1">
+                                        <p class="font-bold text-warm-600 truncate">Theo chân Đại tá Nguyễn Đức Luận về
+                                            miền ký ức kháng chiến</p>
+                                        <p class="text-xs text-gray-500 mb-2">Role: Content development, interview
+                                            design, supporting video editing, article writing</p>
+                                        <p class="text-sm text-gray-700 flex-1">Description: A commemorative article for
+                                            April 30th, honoring war heroes through the personal recollections of the
+                                            featured veteran.</p>
+                                    </div>
+                                    <div class="absolute inset-0 bg-black bg-opacity-40 rounded-lg 
+                                                flex items-center justify-center opacity-0 
+                                                group-hover:opacity-100 transition duration-300">
+                                        <span class="text-white font-semibold text-sm">
+                                            Access to view the article →
+                                        </span>
+                                    </div>
+                                </a>
+                                <!-- Mẫu 9 (ELCOM) -->
+                                <a href="https://www.elcom.com.vn/elcom-don-tiep-cuc-cong-nghiep-an-ninh-h08-toi-tham-va-lam-viec-1761706672?fbclid=IwY2xjawOTtUxleHRuA2FlbQIxMABicmlkETFFWmVFVUVybFNucTdhamtGc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHpFBiYv2rbF1L2Pdaxdoi69oXrMyffF5ckDLniuJ7lJvDQyoz5wcFQHwSF4__aem_8o17omcCI0wwmWCqWq9BQg"
+                                    target="_blank" class="ws-article-card block relative group hover:scale-[1.02] transition duration-300
+                                shadow-lg rounded-xl overflow-hidden bg-white hover:shadow-xl relative h-full">
+                                    <div class="relative overflow-hidden aspect-[16/9]">
+                                        <img src="VTL_img/hoinghi.png" loading="lazy"
+                                            class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+                                        <div
+                                            class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-10 transition duration-300">
+                                        </div>
+                                    </div>
+                                    <div class="p-4 flex flex-col flex-1">
+                                        <p class="font-bold text-warm-600 truncate">ELCOM đón tiếp Cục Công nghiệp An
+                                            ninh (H08) tới thăm và làm việc</p>
+                                        <p class="text-xs text-gray-500 mb-2">Role: Fields photos, post-production
+                                            editing, article writing</p>
+                                    </div>
+                                    <div class="absolute inset-0 bg-black bg-opacity-40 rounded-lg 
+                                                flex items-center justify-center opacity-0 
+                                                group-hover:opacity-100 transition duration-300">
+                                        <span class="text-white font-semibold text-sm">
+                                            Access to view the article →
+                                        </span>
+                                    </div>
+                                </a>
+                                <!-- Mẫu 10 (ELCOM) -->
+                                <a href="https://www.facebook.com/share/p/1PH2BH3Mir/" target="_blank" class="ws-article-card block relative group hover:scale-[1.02] transition duration-300
+                                shadow-lg rounded-xl overflow-hidden bg-white hover:shadow-xl relative h-full">
+                                    <div class="relative overflow-hidden aspect-[16/9]">
+                                        <img src="VTL_img/Nghean.webp"
+                                            alt="Thumbnail Đền Hải Phòng, đi lòng vòng: Đền Nghè" loading="lazy"
+                                            class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+                                        <div
+                                            class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-10 transition duration-300">
+                                        </div>
+                                    </div>
+                                    <div class="p-4 flex flex-col flex-1">
+                                        <p class="font-bold text-warm-600 truncate">Title: Nhìn lại hành trình “Tử Tế”
+                                            của ELCOMers tại Nghệ An</p>
+                                        <p class="text-xs text-gray-500 mb-2">Role: post-production editing, article
+                                            writing </p>
+                                    </div>
+                                    <div class="absolute inset-0 bg-black bg-opacity-40 rounded-lg 
+                                                flex items-center justify-center opacity-0 
+                                                group-hover:opacity-100 transition duration-300">
+                                        <span class="text-white font-semibold text-sm">
+                                            Access to view the article →
+                                        </span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- 5. Phần Liên Hệ (Contact) -->
+    <section id="contact" class="content-section contact-section section-surface-warm relative">
+        <div class="mx-auto max-w-6xl px-4">
+            <h2 class="text-4xl font-bold mb-10 text-center pb-3 inline-block mx-auto contact-heading">
+                Contact
+            </h2>
+
+            <div class="contact-shell rounded-2xl overflow-hidden">
+                <div class="contact-grid">
+                    <div class="contact-intro p-8 md:p-10">
+                        <span class="contact-kicker">THANK YOU FOR WATCHING MY PORTFOLIO</span>
+                        <h3 class="contact-title mt-3">I'm open to communication projects, editorial collaboration, and
+                            media internships.</h3>
+                        <p class="contact-copy mt-4">
+                            If your team needs someone who can write, film, edit, and tell stories with empathy,
+                            I would love to connect and contribute.
+                        </p>
+
+                        <div class="contact-methods mt-7">
+                            <a href="mailto:teacup.dav@gmail.com" class="contact-method" aria-label="Email Tra Ly Vu">
+                                <i data-lucide="mail" class="w-5 h-5"></i>
+                                <span>teacup.dav@gmail.com</span>
+                            </a>
+                            <a href="tel:+84931157859" class="contact-method" aria-label="Call Tra Ly Vu">
+                                <i data-lucide="phone" class="w-5 h-5"></i>
+                                <span>(+84) 93 1157 859</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-actions p-8 md:p-10">
+                        <p class="contact-actions-label">Quick Actions</p>
+
+                        <div class="contact-socials mt-5">
+                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=teacup.dav@gmail.com" target="_blank"
+                                rel="noopener noreferrer" class="contact-social" aria-label="Send Email">
+                                <i data-lucide="send" class="w-5 h-5"></i>
+                                <span>Send Email</span>
+                            </a>
+                            <a href="#hero-section" class="contact-social" aria-label="Back to top profile">
+                                <i data-lucide="user-round" class="w-5 h-5"></i>
+                                <span>View Profile Top</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white mt-8 py-6">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p>&copy; 2026 TRA LY VU. <span class="text-warm-400"></span></p>
+        </div>
+    </footer>
+
+    <button id="back-to-top"
+        class="bg-warm-600 hover:bg-warm-700 text-white p-3 rounded-full shadow-lg transition duration-300">
+        <i data-lucide="arrow-up" class="w-6 h-6"></i>
+    </button>
+</body>
+
+</html>
