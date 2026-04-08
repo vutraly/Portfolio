@@ -3139,9 +3139,9 @@
         .exp-thought-bubble {
             position: relative;
             border-radius: 1rem;
-            border: 1px solid rgba(90, 70, 51, 0.2);
-            background: linear-gradient(180deg, #fffdf9 0%, #f9f1e4 100%);
-            color: #433224;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            background: #5a4633;
+            color: #fffdf9;
             font-family: 'NormalAmpersand', 'Inter', sans-serif;
             font-size: 0.7rem;
             line-height: 1.35;
@@ -3155,8 +3155,8 @@
             content: "";
             position: absolute;
             border-radius: 999px;
-            background: #fffdf9;
-            border: 1px solid rgba(90, 70, 51, 0.2);
+            background: #5a4633;
+            border: 1px solid rgba(255, 255, 255, 0.15);
         }
 
         .exp-thought-bubble::before {
