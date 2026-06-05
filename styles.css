@@ -585,6 +585,11 @@
             box-shadow: 0 20px 30px -10px rgba(30, 41, 59, 0.18), 0 8px 14px -10px rgba(146, 64, 14, 0.22);
         }
 
+        #worksample.card:hover {
+            transform: none;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
         .content-section h2,
         .card h3,
         #worksample h3,
@@ -1036,6 +1041,7 @@
             position: relative;
             z-index: 1;
         }
+
 
         .student-id-profile {
             position: relative;
@@ -5108,6 +5114,7 @@
                 width: 52% !important;
                 padding-right: 2rem !important;
             }
+
             .thp-media-overlap-container {
                 gap: 2rem !important;
             }
@@ -5119,20 +5126,24 @@
                 margin-bottom: -2rem !important;
                 padding-top: 3rem !important;
             }
+
             .thp-stats-container {
                 width: 100% !important;
                 padding-right: 0 !important;
                 margin-left: 0 !important;
                 order: 1;
             }
+
             .thp-media-cutout-wrap {
                 width: 100% !important;
                 order: 2;
                 margin-top: -2rem;
             }
+
             .thp-person-img {
                 height: 420px !important;
             }
+
             .thp-stat-num {
                 font-size: 2.8rem !important;
             }
@@ -5164,17 +5175,17 @@
             .thp-person-img {
                 height: 380px !important;
             }
-            
+
             /* Use single column on mobile for clarity */
             .thp-stats-container div.grid {
                 grid-template-columns: 1fr !important;
                 row-gap: 2.5rem !important;
             }
-            
+
             .thp-stat-item {
                 transform: none !important;
             }
-            
+
             .thp-media-cutout-wrap {
                 margin-top: 0;
             }
@@ -5185,13 +5196,13 @@
             .thp-stat-num {
                 font-size: 2.3rem !important;
             }
+
             .thp-person-img {
                 height: 320px !important;
             }
         }
 
 
-        /* Hide interpreter thought hint on small screens */
         @media (max-width: 1024px) {
             .inter-thought-hint {
                 display: none !important;
@@ -5591,4 +5602,384 @@
             .combo-56-bottom-grid figure:not(:hover)::after {
                 opacity: 0;
             }
+        }
+
+        /* iPhone 17 Frame & Portrait Layout */
+        .short-video-layout-container {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 4rem;
+            position: relative;
+            width: 100%;
+            margin: 3rem auto;
+            padding: 3rem;
+            background: rgba(255, 255, 255, 0.45);
+            backdrop-filter: blur(12px);
+            border-radius: 3.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            box-shadow: 0 40px 100px -20px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Playlist Styles */
+        .video-playlist-container {
+            flex: 1.2;
+            min-width: 0;
+            text-align: left;
+        }
+
+        .playlist-title {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #1a1a1a;
+            margin-bottom: 2rem;
+            position: relative;
+            padding-left: 1.2rem;
+        }
+
+        .playlist-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 5px;
+            height: 24px;
+            background: linear-gradient(to bottom, #d97706, #b45309);
+            border-radius: 10px;
+        }
+
+        .playlist-items {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .playlist-item {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.6);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            border-radius: 1.5rem;
+            cursor: pointer;
+            position: relative;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .playlist-item:hover {
+            background: #fff;
+            transform: translateX(10px);
+            box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.05);
+            border-color: #d97706;
+        }
+
+        .playlist-item.active {
+            background: var(--warm-ink-900);
+            color: var(--warm-paper-50);
+            border-color: var(--warm-accent);
+            box-shadow:
+                0 25px 50px -12px rgba(0, 0, 0, 0.4),
+                0 0 20px rgba(161, 98, 7, 0.2);
+            transform: translateX(12px) scale(1.03);
+            z-index: 5;
+        }
+
+        .item-thumb {
+            width: 48px;
+            height: 48px;
+            background: rgba(217, 119, 6, 0.1);
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #d97706;
+            flex-shrink: 0;
+            transition: all 0.3s;
+        }
+
+        .playlist-item.active .item-thumb {
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+        }
+
+        .item-info {
+            display: flex;
+            flex-direction: column;
+            gap: 0.2rem;
+        }
+
+        .item-name {
+            font-size: 1rem;
+            font-weight: 700;
+            display: block;
+        }
+
+        .item-meta {
+            font-size: 0.8rem;
+            opacity: 0.6;
+        }
+
+        .playlist-item.active .item-meta {
+            opacity: 0.8;
+        }
+
+        .playlist-instruction {
+            margin-top: 1.5rem;
+            font-size: 0.9rem;
+            color: #666;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-style: italic;
+            opacity: 0.8;
+            padding-left: 0.5rem;
+        }
+
+        .playlist-instruction i {
+            width: 16px;
+            height: 16px;
+            color: #d97706;
+        }
+
+        .video-portrait-decor {
+            flex: 0 1 280px;
+            position: relative;
+            z-index: 2;
+            margin-right: -2rem;
+            /* Slight overlap for depth */
+        }
+
+        .portrait-img-cutout {
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.25));
+            transform-origin: bottom center;
+            transition: transform 0.3s ease;
+        }
+
+        .video-portrait-decor:hover .portrait-img-cutout {
+            transform: scale(1.02);
+        }
+
+        /* Phone Mockup Shell - border-only, no clip on TikTok iframe */
+        .phone-mockup-shell {
+            flex: 0 0 auto;
+            position: relative;
+            z-index: 10;
+        }
+
+        .phone-mockup-shell[data-aos="zoom-in"] {
+            position: relative;
+            display: inline-block;
+            /* Border forms the phone bezel */
+            border: 12px solid #0d0d0d;
+            border-radius: 3.2rem;
+            box-shadow:
+                0 0 0 2px #333,
+                0 0 0 3px #111,
+                0 30px 70px -20px rgba(0, 0, 0, 0.75),
+                inset 0 0 12px rgba(255, 255, 255, 0.06);
+            background: #0d0d0d;
+            padding: 8px;
+            z-index: 5;
+            /* NO overflow:hidden, NO transform, NO clip-path */
+        }
+
+        .tiktok-free-zone {
+            display: none;
+        }
+
+        /* deprecated */
+
+        /* Custom Video Screen inside phone */
+        .custom-video-screen {
+            position: relative;
+            width: 325px;
+            height: 578px;
+            /* 9:16 ratio ~ 325 * 16/9 */
+            border-radius: 2.4rem;
+            overflow: hidden;
+            background: #000;
+        }
+
+        /* Play/Pause overlay */
+        .cvp-overlay {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.28);
+            cursor: pointer;
+            transition: background 0.2s ease;
+            z-index: 10;
+        }
+
+        .cvp-overlay.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .cvp-play-btn {
+            background: rgba(0, 0, 0, 0.55);
+            border: 2.5px solid rgba(255, 255, 255, 0.85);
+            border-radius: 50%;
+            width: 72px;
+            height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: transform 0.18s ease, background 0.18s ease;
+            backdrop-filter: blur(6px);
+        }
+
+        .cvp-play-btn:hover {
+            transform: scale(1.1);
+            background: rgba(0, 0, 0, 0.75);
+        }
+
+        /* Badges row at top */
+        .cvp-badge-row {
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            display: flex;
+            gap: 6px;
+            z-index: 20;
+        }
+
+        /* Progress Bar Styles */
+        .cvp-progress-container {
+            position: absolute;
+            bottom: 60px;
+            left: 14px;
+            right: 14px;
+            z-index: 20;
+        }
+
+        .cvp-progress-bar {
+            width: 100%;
+            height: 4px;
+            -webkit-appearance: none;
+            appearance: none;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 2px;
+            outline: none;
+            cursor: pointer;
+        }
+
+        .cvp-progress-bar::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 12px;
+            height: 12px;
+            background: #d97706;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .cvp-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            background: rgba(0, 0, 0, 0.58);
+            backdrop-filter: blur(8px);
+            color: #fff;
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            padding: 4px 10px;
+            border-radius: 99px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+        .cvp-short-badge {
+            background: rgba(220, 38, 38, 0.8);
+            border-color: rgba(252, 165, 165, 0.4);
+        }
+
+        /* TikTok credit at bottom */
+        .cvp-tiktok-credit {
+            position: absolute;
+            bottom: 14px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 20;
+        }
+
+        .cvp-tiktok-credit a {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            color: #fff;
+            font-size: 0.7rem;
+            font-weight: 600;
+            background: rgba(0, 0, 0, 0.55);
+            backdrop-filter: blur(8px);
+            padding: 5px 12px;
+            border-radius: 99px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            text-decoration: none;
+            transition: background 0.2s;
+            white-space: nowrap;
+        }
+
+        .cvp-tiktok-credit a:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+
+        @media (max-width: 850px) {
+            .short-video-layout-container {
+                flex-direction: column !important;
+                align-items: center;
+                gap: 3rem;
+            }
+
+            .phone-mockup-shell {
+                order: 1;
+            }
+
+            .video-playlist-container {
+                order: 2;
+            }
+        }
+
+        @media (min-width: 851px) {
+            .short-video-layout-container {
+                flex-direction: row !important;
+                justify-content: center;
+                gap: 5rem;
+            }
+        }
+
+        /* Essential components remaining */
+        .iphone-side-button {
+            position: absolute;
+            right: -8px;
+            top: 160px;
+            width: 4px;
+            height: 80px;
+            background: #2a2a2a;
+            border-radius: 4px 0 0 4px;
+        }
+
+        .iphone-volume-buttons {
+            position: absolute;
+            left: -8px;
+            top: 120px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .iphone-volume-buttons div {
+            width: 4px;
+            height: 50px;
+            background: #2a2a2a;
+            border-radius: 0 4px 4px 0;
         }

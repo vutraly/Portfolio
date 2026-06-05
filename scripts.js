@@ -821,3 +821,99 @@ document.addEventListener('DOMContentLoaded', () => {
         document.addEventListener('DOMContentLoaded', initCountUps, { once: true });
     }
 })();
+
+// Custom Short Video Player Controller
+function setupShortVideoPlayer() {
+    const video = document.getElementById('short-exp-video');
+    const overlay = document.getElementById('cvp-overlay');
+    const playBtn = document.getElementById('cvp-play-btn');
+    const durText = document.getElementById('cvp-dur-text');
+    const curText = document.getElementById('cvp-cur-text');
+    const progressBar = document.getElementById('cvp-progress-bar');
+    const tiktokAnchor = document.getElementById('cvp-tiktok-anchor');
+    const playlistItems = document.querySelectorAll('.playlist-item');
+
+    if (!video) return;
+
+    // mm:ss format
+    const fmt = (t) => {
+        if (!isFinite(t) || isNaN(t)) return '00:00';
+        const m = Math.floor(t / 60);
+        const s = Math.floor(t % 60);
+        return `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+    };
+
+    // Update duration initially and on source change
+    const updateDuration = () => {
+        if (durText) durText.textContent = fmt(video.duration);
+    };
+
+    video.addEventListener('loadedmetadata', updateDuration);
+    
+    // In case already loaded
+    if (video.readyState >= 1) updateDuration();
+
+    // Time update: current time & progress bar sync
+    video.addEventListener('timeupdate', () => {
+        if (curText) curText.textContent = fmt(video.currentTime);
+        if (progressBar && video.duration) {
+            progressBar.value = (video.currentTime / video.duration) * 100;
+        }
+    });
+
+    // Seeking logic
+    if (progressBar) {
+        progressBar.addEventListener('input', () => {
+            const time = (progressBar.value / 100) * video.duration;
+            video.currentTime = time;
+        });
+    }
+
+    const togglePlay = (e) => {
+        if (e) e.stopPropagation();
+        if (video.paused) {
+            video.play().catch(err => console.log("Play blocked:", err));
+        } else {
+            video.pause();
+        }
+    };
+
+    // Click listeners
+    if (overlay) overlay.addEventListener('click', togglePlay);
+    if (playBtn) playBtn.addEventListener('click', togglePlay);
+    video.addEventListener('click', togglePlay);
+
+    // Overlay visibility
+    video.addEventListener('play', () => overlay?.classList.add('hidden'));
+    video.addEventListener('pause', () => overlay?.classList.remove('hidden'));
+    video.addEventListener('ended', () => overlay?.classList.remove('hidden'));
+
+    // Playlist Logic
+    playlistItems.forEach(item => {
+        item.addEventListener('click', () => {
+            const src = item.getAttribute('data-video-src');
+            const tkLink = item.getAttribute('data-tiktok-link');
+
+            if (src) {
+                playlistItems.forEach(i => i.classList.remove('active'));
+                item.classList.add('active');
+
+                const source = video.querySelector('source');
+                if (source) source.src = src;
+                video.load();
+                
+                if (tiktokAnchor && tkLink) {
+                    tiktokAnchor.href = tkLink;
+                }
+
+                video.play().catch(() => {
+                    overlay?.classList.remove('hidden');
+                });
+            }
+        });
+    });
+}
+
+document.addEventListener('DOMContentLoaded', setupShortVideoPlayer);
+
+
