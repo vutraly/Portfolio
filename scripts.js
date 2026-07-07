@@ -849,7 +849,7 @@ function setupShortVideoPlayer() {
     };
 
     video.addEventListener('loadedmetadata', updateDuration);
-    
+
     // In case already loaded
     if (video.readyState >= 1) updateDuration();
 
@@ -901,7 +901,7 @@ function setupShortVideoPlayer() {
                 const source = video.querySelector('source');
                 if (source) source.src = src;
                 video.load();
-                
+
                 if (tiktokAnchor && tkLink) {
                     tiktokAnchor.href = tkLink;
                 }
@@ -916,4 +916,62 @@ function setupShortVideoPlayer() {
 
 document.addEventListener('DOMContentLoaded', setupShortVideoPlayer);
 
-
+/* =============================================
+   MAGAZINE FLIPBOOK LOGIC (StPageFlip)
+   ============================================= */
+function initMagazineFlipbook() {
+    const wrap = document.getElementById('magazine-wrap');
+    if (!wrap || typeof St === 'undefined') return;
+
+    // Các link tương ứng với từng trang (mỗi article 2 trang, link sẽ chuyển sau mỗi lần lật 2 trang)
+    const articleLinks = [
+        "https://vtv.vn/cung-gioi-tre-viet-tiep-cau-chuyen-van-hoa-100250623115138698.htm",
+        "https://vtv.vn/xa-hoi/theo-chan-dai-ta-nguyen-duc-luan-ve-mien-ky-uc-khang-chien-2025043017040165.htm",
+        "https://www.elcom.com.vn/elcom-don-tiep-cuc-cong-nghiep-an-ninh-h08-toi-tham-va-lam-viec-1761706672?fbclid=IwY2xjawOTtUxleHRuA2FlbQIxMABicmlkETFFWmVFVUVybFNucTdhamtGc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHpFBiYv2rbF1L2Pdaxdoi69oXrMyffF5ckDLniuJ7lJvDQyoz5wcFQHwSF4__aem_8o17omcCI0wwmWCqWq9BQg",
+        "https://www.facebook.com/share/p/1PH2BH3Mir/"
+    ];
+
+    const pageFlip = new St.PageFlip(wrap, {
+        width: 450, // Base width (thay đổi theo flex/css)
+        height: 600, // Base height
+        size: "stretch",
+        minWidth: 300,
+        maxWidth: 1000,
+        minHeight: 400,
+        maxHeight: 1400,
+        maxShadowOpacity: 0.2,
+        showCover: false,
+        mobileScrollSupport: false // Đừng chặn cuộn trang web trên điện thoại
+    });
+
+    const pages = document.querySelectorAll('.my-page');
+    pageFlip.loadFromHTML(pages);
+
+    const btnPrev = document.querySelector('.mag-prev');
+    const btnNext = document.querySelector('.mag-next');
+    const pageIndicator = document.getElementById('mag-current-page');
+    const readBtn = document.getElementById('dynamic-read-btn');
+
+    btnPrev.addEventListener('click', () => {
+        pageFlip.flipPrev();
+    });
+
+    btnNext.addEventListener('click', () => {
+        pageFlip.flipNext();
+    });
+
+    pageFlip.on('flip', (e) => {
+        // e.data is the CURRENT left page index. Since showCover: false, index 0 is left, 1 is right.
+        const articleIndex = Math.floor(e.data / 2);
+        
+        if (pageIndicator) {
+            pageIndicator.innerText = (articleIndex + 1).toString();
+        }
+        if (readBtn && articleLinks[articleIndex]) {
+            readBtn.href = articleLinks[articleIndex];
+        }
+    });
+}
+document.addEventListener('DOMContentLoaded', initMagazineFlipbook);
+
+
