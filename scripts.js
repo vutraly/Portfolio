@@ -377,10 +377,30 @@ function startHeroIntro(heroImages) {
     })();
 }
 
+function setupNavbarScroll() {
+    const nav = document.getElementById('main-nav');
+    const heroSection = document.getElementById('hero-section');
+    if (!nav || !heroSection) return;
+
+    function updateNav() {
+        const heroBottom = heroSection.getBoundingClientRect().bottom;
+        // Activate scrolled state once hero bottom is at or above the navbar (~64px threshold)
+        if (heroBottom <= 64) {
+            nav.classList.add('nav-scrolled');
+        } else {
+            nav.classList.remove('nav-scrolled');
+        }
+    }
+
+    window.addEventListener('scroll', updateNav, { passive: true });
+    updateNav(); // run once on load
+}
+
 window.addEventListener('load', () => {
     initializeCarousels();
     initializeEffects();
     setupArtisticEffects();
+    setupNavbarScroll();
     if (window.AOS && typeof AOS.refresh === 'function') {
         setTimeout(() => AOS.refresh(), 120);
     }
@@ -963,7 +983,7 @@ function initMagazineFlipbook() {
     pageFlip.on('flip', (e) => {
         // e.data is the CURRENT left page index. Since showCover: false, index 0 is left, 1 is right.
         const articleIndex = Math.floor(e.data / 2);
-        
+
         if (pageIndicator) {
             pageIndicator.innerText = (articleIndex + 1).toString();
         }
