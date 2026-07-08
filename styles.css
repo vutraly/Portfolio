@@ -6190,7 +6190,7 @@
         .magazine-book {
             position: relative;
             width: 100%;
-            aspect-ratio: 16/10;
+            aspect-ratio: 16/9; /* Đổi thành tỷ lệ 16:9 để khớp chuẩn hình ảnh ngang */
             background: #fff;
             box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15), inset 0 0 40px rgba(0, 0, 0, 0.03);
             border-radius: 4px;
@@ -6330,6 +6330,140 @@
             }
         }
 
+        /* Split card styles: Spanning across 2 pages (Left = Image left, Right = Image right) */
+        .mag-img-split {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            position: relative;
+            background: #f5f3ef;
+        }
+
+        .mag-img-split img {
+            position: absolute;
+            top: 0;
+            width: 200%;
+            max-width: none; /* Ghi đè max-width: 100% của CSS globals reset */
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .mag-img-split.left-side img {
+            left: 0;
+            right: auto;
+        }
+
+        .mag-img-split.right-side img {
+            left: auto;
+            right: 0;
+        }
+
+        /* No scale on hover to maintain seamless center seam alignment */
+
+        .mag-text-split-left {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 1.5rem 1.5rem 1.5rem 2.5rem;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.45) 75%, rgba(0, 0, 0, 0) 100%);
+            box-sizing: border-box;
+            z-index: 5;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+
+        .mag-text-split-right {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 1.5rem 2.5rem 1.5rem 1.5rem;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.45) 75%, rgba(0, 0, 0, 0) 100%);
+            box-sizing: border-box;
+            z-index: 5;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            gap: 0.4rem;
+        }
+
+        /* Lớp nền trắng chuyên biệt cho các ảnh đã có sẵn chữ */
+        .mag-text-white-bg {
+            background: rgba(255, 255, 255, 0.96) !important;
+            backdrop-filter: blur(5px);
+        }
+
+        .mag-text-white-bg .mag-title {
+            color: var(--warm-900) !important;
+            text-shadow: none !important;
+        }
+
+        .mag-text-white-bg .mag-role,
+        .mag-text-white-bg .mag-desc {
+            color: #333333 !important;
+            text-shadow: none !important;
+        }
+
+        .mag-text-white-bg strong {
+            color: var(--warm-800) !important;
+        }
+
+        .magazine-page .mag-title {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: #ffffff;
+            margin: 0 0 0.2rem 0;
+            font-family: 'Plus Jakarta Sans', serif;
+            line-height: 1.35;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        .magazine-page .mag-role,
+        .magazine-page .mag-desc {
+            font-size: 0.9rem;
+            color: #e2e8f0;
+            margin: 0;
+            line-height: 1.5;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+        }
+
+        .magazine-page strong {
+            color: #f59e0b; /* Màu vàng cam ấm tạo điểm nhấn */
+            font-weight: 700;
+        }
+
+        @media (max-width: 768px) {
+            .mag-img-split {
+                height: 50% !important;
+            }
+            .mag-text-split-left,
+            .mag-text-split-right {
+                position: static !important;
+                height: 50% !important;
+                width: 100% !important;
+                padding: 1rem !important;
+                background: #111111; /* Đổi thành màu tối để không đè chữ gốc của ảnh */
+                transform: translateY(0) !important;
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                overflow-y: auto;
+            }
+            .magazine-page .mag-title {
+                font-size: 1.05rem;
+                margin-bottom: 0.1rem;
+            }
+            .magazine-page .mag-role,
+            .magazine-page .mag-desc {
+                font-size: 0.78rem;
+                line-height: 1.35;
+            }
+        }
+
         .mag-img-container {
             width: 100%;
             height: 45%;
@@ -6444,6 +6578,19 @@
 
         .mag-next {
             right: -25px;
+        }
+
+        /* Wrap-around indicator: when button will loop to first/last page */
+        .magazine-nav-btn.mag-btn-at-end {
+            background: var(--warm-100);
+            border-color: var(--warm-400);
+            color: var(--warm-700);
+            animation: mag-pulse-end 1.8s ease-in-out infinite;
+        }
+
+        @keyframes mag-pulse-end {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(175, 130, 71, 0.25); }
+            50% { box-shadow: 0 0 0 6px rgba(175, 130, 71, 0); }
         }
 
         @media (max-width: 768px) {

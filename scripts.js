@@ -943,7 +943,7 @@ function initMagazineFlipbook() {
     const wrap = document.getElementById('magazine-wrap');
     if (!wrap || typeof St === 'undefined') return;
 
-    // Các link tương ứng với từng trang (mỗi article 2 trang, link sẽ chuyển sau mỗi lần lật 2 trang)
+    // Các link tương ứng với từng trang (mỗi article 1 trang)
     const articleLinks = [
         "https://vtv.vn/cung-gioi-tre-viet-tiep-cau-chuyen-van-hoa-100250623115138698.htm",
         "https://vtv.vn/xa-hoi/theo-chan-dai-ta-nguyen-duc-luan-ve-mien-ky-uc-khang-chien-2025043017040165.htm",
@@ -951,17 +951,19 @@ function initMagazineFlipbook() {
         "https://www.facebook.com/share/p/1PH2BH3Mir/"
     ];
 
+    const totalArticles = articleLinks.length; // 4
+
     const pageFlip = new St.PageFlip(wrap, {
-        width: 450, // Base width (thay đổi theo flex/css)
-        height: 600, // Base height
+        width: 400,
+        height: 450,
         size: "stretch",
-        minWidth: 300,
+        minWidth: 200,
         maxWidth: 1000,
-        minHeight: 400,
-        maxHeight: 1400,
+        minHeight: 225,
+        maxHeight: 1200,
         maxShadowOpacity: 0.2,
         showCover: false,
-        mobileScrollSupport: false // Đừng chặn cuộn trang web trên điện thoại
+        mobileScrollSupport: false
     });
 
     const pages = document.querySelectorAll('.my-page');
@@ -972,16 +974,54 @@ function initMagazineFlipbook() {
     const pageIndicator = document.getElementById('mag-current-page');
     const readBtn = document.getElementById('dynamic-read-btn');
 
+    function updateNavButtons(currentPageIndex) {
+        // Since showCover: false, page indices will be 0, 2, 4, 6...
+        const articleIndex = Math.floor(currentPageIndex / 2);
+
+        if (btnPrev) {
+            const isFirst = (articleIndex === 0);
+            if (isFirst) {
+                btnPrev.classList.add('disabled');
+                btnPrev.style.pointerEvents = 'none';
+                btnPrev.style.opacity = '0.5';
+            } else {
+                btnPrev.classList.remove('disabled');
+                btnPrev.style.pointerEvents = 'auto';
+                btnPrev.style.opacity = '1';
+            }
+        }
+        if (btnNext) {
+            const isLast = (articleIndex >= totalArticles - 1);
+            if (isLast) {
+                btnNext.classList.add('disabled');
+                btnNext.style.pointerEvents = 'none';
+                btnNext.style.opacity = '0.5';
+            } else {
+                btnNext.classList.remove('disabled');
+                btnNext.style.pointerEvents = 'auto';
+                btnNext.style.opacity = '1';
+            }
+        }
+    }
+
     btnPrev.addEventListener('click', () => {
-        pageFlip.flipPrev();
+        const cur = pageFlip.getCurrentPageIndex();
+        const articleIndex = Math.floor(cur / 2);
+        if (articleIndex > 0) {
+            pageFlip.flipPrev();
+        }
     });
 
     btnNext.addEventListener('click', () => {
-        pageFlip.flipNext();
+        const cur = pageFlip.getCurrentPageIndex();
+        const articleIndex = Math.floor(cur / 2);
+        if (articleIndex < totalArticles - 1) {
+            pageFlip.flipNext();
+        }
     });
 
     pageFlip.on('flip', (e) => {
-        // e.data is the CURRENT left page index. Since showCover: false, index 0 is left, 1 is right.
+        // e.data is the new current page index
         const articleIndex = Math.floor(e.data / 2);
 
         if (pageIndicator) {
@@ -990,7 +1030,11 @@ function initMagazineFlipbook() {
         if (readBtn && articleLinks[articleIndex]) {
             readBtn.href = articleLinks[articleIndex];
         }
+        updateNavButtons(e.data);
     });
+
+    // Initialize nav button state
+    updateNavButtons(0);
 }
 document.addEventListener('DOMContentLoaded', initMagazineFlipbook);
 
