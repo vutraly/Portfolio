@@ -771,7 +771,6 @@ function setupStaticImageZoom() {
 document.addEventListener('DOMContentLoaded', () => {
     startHeroIntro(Array.from(document.querySelectorAll('.hero-img')));
     setupCarousel('3h');
-    setupCarousel('3c', 3);
     setupCarousel('3i', 1);
     setupCarousel('3j', 3);
     setupLogosScroll();
